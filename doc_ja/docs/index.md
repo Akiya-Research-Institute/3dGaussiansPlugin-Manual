@@ -7,4 +7,4 @@
 - UEエディタ上で数クリックでインポートできます。
 - RTX3070なら約45FPSでリアルタイム描画が可能。
 - PythonやCUDAに依存せず、UEのNiagaraとMaterialで実装が完結しているため、様々な環境で動作します。
-- [デモプロジェクト](https://github.com/Akiya-Research-Institute/3dGaussiansPlugin-Demo)を無料でダウンロードできます。
+- [デモプロジェクト](./demo-project-overview)を無料でダウンロードできます。

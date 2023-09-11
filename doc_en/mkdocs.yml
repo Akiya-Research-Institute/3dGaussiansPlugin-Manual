@@ -87,7 +87,7 @@ markdown_extensions:
   - footnotes
 
 nav:
-  # - Plugin:
+  - Plugin:
     - index.md
     - system-requirement.md
     - install.md
@@ -97,5 +97,5 @@ nav:
       - how-to-migrate.md
     - faq.md
     - changelog.md
-  # - Demo Project:
-    # - demo-project-overview.md
+  - Demo Project:
+    - demo-project-overview.md

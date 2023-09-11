@@ -7,4 +7,4 @@
 - Just a few clicks on the UE editor to import.
 - Real-time rendering at about 45 FPS with RTX3070.
 - Fully implemented in Niagara and Material, without relying on Python or CUDA
-- [Demo project](https://github.com/Akiya-Research-Institute/3dGaussiansPlugin-Demo) is available for free.
+- [Demo project](./demo-project-overview) is available for free.
