@@ -7,4 +7,4 @@
 - UEエディタ上で数クリックでインポートできます。
 - RTX3070なら約45FPSでリアルタイム描画が可能。
 - PythonやCUDAに依存せず、UEのNiagaraとMaterialで実装が完結しているため、様々な環境で動作します。
-- [デモプロジェクト](https://s3.ap-northeast-1.wasabisys.com/whisperrealtime/3D%20Gaussian%20Plaguin%20for%20UE5%20-%20Demo%20v0.1.zip)を無料でダウンロードできます。
+- [デモプロジェクト](https://github.com/Akiya-Research-Institute/3dGaussiansPlugin-Demo)を無料でダウンロードできます。

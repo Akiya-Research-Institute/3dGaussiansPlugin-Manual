@@ -7,4 +7,4 @@
 - Just a few clicks on the UE editor to import.
 - Real-time rendering at about 45 FPS with RTX3070.
 - Fully implemented in Niagara and Material, without relying on Python or CUDA
-- [Demo project](https://s3.ap-northeast-1.wasabisys.com/whisperrealtime/3D%20Gaussian%20Plaguin%20for%20UE5%20-%20Demo%20v0.1.zip) is available for free.
+- [Demo project](https://github.com/Akiya-Research-Institute/3dGaussiansPlugin-Demo) is available for free.
