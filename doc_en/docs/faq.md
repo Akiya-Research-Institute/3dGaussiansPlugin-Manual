@@ -1,10 +1,13 @@
 # FAQ
 
-## UE crashes when GPU_CUDA is selected
+## Is 3D Gaussian Splatting a family of photogrammetry?
 
-Please confirm you have installed CUDA and cuDNN correctly.
+No, the underlying mechanisms are very different.
 
-## Transcipt result is unstable
+## Is 3D Gaussian Splatting a family of NeRF?
 
-- Please speak loudly near the microphone.
-- Try larger models
+No, the underlying mechanisms are very different.
+
+## Is 3D Gaussian Splatting a family of Differentiable Rendering?
+
+Yes.

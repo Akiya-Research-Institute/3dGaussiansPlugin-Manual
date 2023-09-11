@@ -1,13 +1,13 @@
 # FAQ
 
-## Is 3D Gaussian Splatting a family of photogrammetry?
+## 3D Gaussian Splattingはフォトグラメトリの一種ですか？
 
-No, the underlying mechanisms are very different.
+いいえ。原理が大きく異なります。
 
-## Is 3D Gaussian Splatting a family of NeRF?
+## 3D Gaussian SplattingはNeRFの一種ですか？
 
-No, the underlying mechanisms are very different.
+いいえ。原理が大きく異なります。
 
-## Is 3D Gaussian Splatting a family of Differentiable Rendering?
+## 3D Gaussian Splattingは微分可能レンダリングの一種ですか？
 
-Yes.
+はい。
