@@ -2,8 +2,8 @@
 
 ## Supported Unreal Engine version:
 
-- 5.1
-- 5.2
+<!-- - 5.1
+- 5.2 -->
 - 5.3
 
 ## Supported Platforms
