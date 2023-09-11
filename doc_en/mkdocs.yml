@@ -1,0 +1,101 @@
+site_name: 3D Gaussians Plugin Manual
+site_url: https://Akiya-Research-Institute.github.io/3dGaussiansPlugin-Manual/
+site_author: Kenji Asaba
+site_description: Official documentation of 3D Gaussians Plugin for Unreal Engine, a importer and a renderer of training results of 3D Gaussian Splatting.
+copyright: Copyright &copy; 2023 Akiya Research Institute, Inc. All Rights Reserved
+
+site_dir: ../docs/en
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: M PLUS 1
+    code: M PLUS 1 Code
+  language: en
+  favicon: images/favicon_b.png
+  logo: images/favicon_w.png
+  features:
+    - navigation.instant
+    - navigation.tracking    
+    # - navigation.tabs
+    - navigation.sections
+    # - navigation.expand
+    # - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    
+extra:
+  alternate:
+    - name: English
+      link: /3dGaussiansPlugin-Manual/en/ 
+      lang: en
+    - name: 日本語
+      link: /3dGaussiansPlugin-Manual/ja/
+      lang: ja
+  analytics:
+    provider: google
+    property: UA-2709176-10
+  social:
+    - icon: material/home
+      link: https://vrlab.akiya-souken.co.jp/
+    - icon: fontawesome/brands/youtube 
+      link: https://www.youtube.com/channel/UC7t4amWNvquSy_ODcGZ4R0g
+    - icon: fontawesome/brands/twitter 
+      link: https://twitter.com/Akiya_Souken_VR
+    - icon: fontawesome/brands/github 
+      link: https://github.com/Akiya-Research-Institute
+    - icon: material/store
+      link: https://www.unrealengine.com/marketplace/en/product/410c8105b3aa41d38ab68660295bd7f3
+  # generator: false
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.details
+  - footnotes
+
+nav:
+  # - Plugin:
+    - index.md
+    - system-requirement.md
+    - install.md
+    - modules.md
+    - How to use:
+      - how-to-import.md
+      - how-to-migrate.md
+    - faq.md
+    - changelog.md
+  # - Demo Project:
+    # - demo-project-overview.md
