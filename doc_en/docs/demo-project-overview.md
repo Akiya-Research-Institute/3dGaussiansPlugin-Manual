@@ -20,6 +20,7 @@ Demo includes "Garden" and "Bicycle" scenes using Mip-NeRF 360 data.
 - Movement: WASD keys + Mouse
 - Map switching: Tab key
 - FPS display: F key
+- Quit demo: ESC key
 
 ## Source
 

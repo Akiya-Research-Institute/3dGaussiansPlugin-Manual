@@ -18,7 +18,7 @@
 
 ![](images/how-to-place.png){ loading=lazy }  
 
-1. Drag and drop "BP_3D_Gaussians_*ModelName*" onto the level in the content browser under "Content > ThreeDGaussians > *ModelName*".
+1. Drag and drop "Content > ThreeDGaussians > *ModelName* > BP_3D_Gaussians_*ModelName*" onto the level in the content browser.
 
 Also, if necessary, set the following items under "Default" in the Details tab.
 

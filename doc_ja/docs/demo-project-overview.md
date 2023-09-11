@@ -17,10 +17,10 @@ EXE形式のデモプロジェクトを[こちら](https://s3.ap-northeast-1.was
 
 デモには、Mip-NeRF 360のデータを使った「Garden」と「Bicycle」のシーンが含まれています。
 
-- 移動：WASDキー
-- 視点：マウス
+- 移動：WASDキー + マウス
 - マップ切り替え：Tabキー
 - FPS表示：Fキー
+- 終了: ESCキー
 
 ## GitHubソース
 
