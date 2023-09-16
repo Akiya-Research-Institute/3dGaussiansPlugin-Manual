@@ -94,7 +94,7 @@ nav:
     - modules.md
     - 使い方:
       - how-to-import.md
-      - how-to-migrate.md
+      - how-to-split.md
     - faq.md
     - changelog.md
   - デモプロジェクト:

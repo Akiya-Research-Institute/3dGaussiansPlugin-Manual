@@ -4,4 +4,5 @@
 
 | Module | Description |
 | ---- | ---- |
-| 3D Gaussians | 3D Gaussian Splattingのデータをインポートするためのエディタオンリーのモジュールです。UEエディタでのボタン押下時のインポート処理が実装されています。 |
+| 3D GaussiansImporter | 3D Gaussian Splattingのデータをインポートするためのエディタオンリーのモジュールです。UEエディタでのボタン押下時のインポート処理が実装されています。 |
+| 3D Gaussians | インポートした3D Gaussian SplattingのデータをC++からBPへ受け渡すための構造体を定義したモジュールです。 |

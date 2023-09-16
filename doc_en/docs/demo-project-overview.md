@@ -10,7 +10,7 @@ Packaged build in EXE format is available [here](https://s3.ap-northeast-1.wasab
 
 - Windows 10 64bit
 - Unreal Engine 5.3.0
-- 3D Gaussians Plugin 1.0.0
+- 3D Gaussians Plugin 1.0
 - GPU which support DirectX 12
 
 ## How to use demo
