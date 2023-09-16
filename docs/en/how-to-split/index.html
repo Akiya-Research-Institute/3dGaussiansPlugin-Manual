@@ -599,16 +599,20 @@
 
 
 <h1 id="adjust-block-split-rule">Adjust block split rule</h1>
-<p>This plugin renders 3D Gaussian Splatting data using Niagara particles. Because there is a limit to the number of particles in a Niagara system, this plugin imports 3D Gaussian Splatting data into multiple blocks.  </p>
-<p>This allows for large data sizes to be rendered, but it does cause a problem: if you look carefully, you can see the seams between the blocks.<br />
+<p><img alt="" loading="lazy" src="../images/how-to-split.png" />  </p>
+<p>This plugin renders 3D Gaussian Splatting data using Niagara particles. Because there is a limit to the number of particles in a Niagara system, this plugin imports 3D Gaussian Splatting data into multiple blocks and assign a Niagara system for each block.  </p>
+<p>This allows for large data to be rendered, but it does cause a problem: if you look carefully, you can see the seams between the blocks.<br />
 For this reason, the block split rules can be edited according to the intended use.<br />
 The data is re-split by changing the rules in the following procedure and importing the data again.</p>
-<p><img alt="" loading="lazy" src="../images/how-to-split.png" />  </p>
 <h2 id="specify-block-size">Specify block size</h2>
 <p>In this plugin, the 3D Gaussian Splatting data after splitting is stored in square textures.<br />
 The maximum value of the texture's sides can be set by specifying the console variable like <code>ThreeDGaussians.MaxTextureWidth 1264</code>.  </p>
 <p>The square of this value is the maximum number of particles each block can hold.<br />
 The default value is 1024.</p>
+<p>This method can be re-enabled by specifying the following in the console variable:  </p>
+<ul>
+<li><code>ThreeDGaussians.DoSplitBy3dMortonOrder 1</code></li>
+</ul>
 <div class="admonition question">
 <p class="admonition-title">The max number of particles in Niagara</p>
 <p>The maximum number of particles Niagara can handle is 2,000,000. (as of UE5.1).<br />
@@ -617,6 +621,7 @@ Therefore, the default split size is set to 1024*1024=1,048,576.  </p>
 </div>
 <h2 id="select-split-mode">Select split mode</h2>
 <h3 id="split-by-morton-order">Split by Morton Order</h3>
+<p><img alt="" loading="lazy" src="../images/how-to-split-morton.png" />  </p>
 <p>This method is enabled by default.  </p>
 <div class="highlight"><pre><span></span><code>Split data into two blocks by the position of Z-axis  
 → For each split block, split data into two blocks by the position of Y-axis.  
@@ -635,6 +640,7 @@ This <code>tree</code> is an element of <code>FThreeDGaussians</code> which is p
 Depth-sort by the binary <code>tree</code> is implemented in the <code>Tick</code> event of <code>BP_3D_Gaussians_Base</code>.</p>
 </div>
 <h3 id="split-by-the-distance">Split by the distance</h3>
+<p><img alt="" loading="lazy" src="../images/how-to-split-distance.png" />  </p>
 <div class="highlight"><pre><span></span><code>Make a block from the first N data closest to the origin  
 → Make a block from the next N data closest to the origin  
 → ...  
@@ -650,12 +656,12 @@ However, this method has the disadvantage that although it can draw correctly wh
 <li><code>ThreeDGaussians.DoSplitByDistance 1</code></li>
 </ul>
 <h2 id="tips">Tips</h2>
-<details class="success">
-<summary>Keep data as small as possible</summary>
+<div class="admonition success">
+<p class="admonition-title">Keep data as small as possible</p>
 <p>You can reduce the number of splits by keeping the data small in the first place.<br />
 You can reduce the data size in exchange for image quality by specifying like <code>--densification_interval 500</code> in the options of `train.py`` of 3D Gaussian Splatting.  </p>
 <p>Note that reducing the data size also improves the FPS.</p>
-</details>
+</div>
 
 
   

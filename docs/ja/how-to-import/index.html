@@ -593,11 +593,15 @@
 <li>コンテンツブラウザで「Content &gt; ThreeDGaussians &gt; モデル名」の下の「BP_3D_Gaussians_モデル名」をレベル上にドラッグ＆ドロップします。</li>
 </ol>
 <p>また、必要に応じて詳細タブの「Default」の下の項目を設定します。</p>
-<ol>
-<li>「Enabled Blocks」で、インポートしたデータのどのブロックを表示するかを選択します。</li>
-<li>「Spherical Harmonics Degree」で、色の描画方法を選択します。「Degree 0」は見る角度による色の変化を無効にします（反射などがなくなります）。「Degree 1～3」は見る角度による色の変化を有効にします。高いDegreeを指定すると描画が正確になりますが、描画負荷が上がります。</li>
-<li>「Min translucency sort priority」で、3D Gaussian Splattingのデータの描画の優先度を設定します。本プラグインでは、3D Gaussian Splattingのデータは半透明のメッシュとして描画されます。最も遠いブロックのTranslucency Sort Priorityにこの値が適用され、最も近いブロックには(この値 + 有効なブロック数 - 1)の値が適用されます。</li>
-</ol>
+<ul>
+<li><strong>Enabled Blocks</strong>で、インポートしたデータのどのブロックを表示するかを選択します。</li>
+<li><strong>Spherical Harmonics Degree</strong>で、色の描画方法を選択します。<br />
+    「Degree 0」は見る角度による色の変化を無効にします（反射などがなくなります）。<br />
+    「Degree 1～3」は見る角度による色の変化を有効にします。高いDegreeを指定すると描画が正確になりますが、描画負荷が上がります。</li>
+<li><strong>Min translucent sort priority</strong>で、3D Gaussian Splattingのデータの描画の優先度を設定します。<br />
+    本プラグインでは、3D Gaussian Splattingのデータは半透明のメッシュとして描画されます。<br />
+    最も遠いブロックのTranslucency Sort Priorityにこの値が適用され、最も近いブロックには(この値 + 有効なブロック数 - 1)の値が適用されます。</li>
+</ul>
 
 
   

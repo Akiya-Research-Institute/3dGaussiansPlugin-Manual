@@ -1,12 +1,12 @@
 # Adjust block split rule
 
-This plugin renders 3D Gaussian Splatting data using Niagara particles. Because there is a limit to the number of particles in a Niagara system, this plugin imports 3D Gaussian Splatting data into multiple blocks.  
+![](images/how-to-split.png){ loading=lazy }  
 
-This allows for large data sizes to be rendered, but it does cause a problem: if you look carefully, you can see the seams between the blocks.  
+This plugin renders 3D Gaussian Splatting data using Niagara particles. Because there is a limit to the number of particles in a Niagara system, this plugin imports 3D Gaussian Splatting data into multiple blocks and assign a Niagara system for each block.  
+
+This allows for large data to be rendered, but it does cause a problem: if you look carefully, you can see the seams between the blocks.  
 For this reason, the block split rules can be edited according to the intended use.  
 The data is re-split by changing the rules in the following procedure and importing the data again.
-
-![](images/how-to-split.png){ loading=lazy }  
 
 ## Specify block size
 
@@ -16,6 +16,10 @@ The maximum value of the texture's sides can be set by specifying the console va
 The square of this value is the maximum number of particles each block can hold.  
 The default value is 1024.
 
+This method can be re-enabled by specifying the following in the console variable:  
+
+- `ThreeDGaussians.DoSplitBy3dMortonOrder 1`
+
 !!! Question "The max number of particles in Niagara"
     The maximum number of particles Niagara can handle is 2,000,000. (as of UE5.1).  
     However, although the detailed conditions are unknown, sometimes a warning message appears with a smaller value (e.g., 1,597,823 particles).  
@@ -24,6 +28,8 @@ The default value is 1024.
 ## Select split mode
 
 ### Split by Morton Order
+
+![](images/how-to-split-morton.png){ loading=lazy }  
 
 This method is enabled by default.  
 
@@ -47,6 +53,8 @@ On the other hand, it has the disadvantage that it is difficult to predict where
 
 ### Split by the distance
 
+![](images/how-to-split-distance.png){ loading=lazy }  
+
 ```
 Make a block from the first N data closest to the origin  
 → Make a block from the next N data closest to the origin  
@@ -67,7 +75,7 @@ This method can be enabled by specifying the following two in the console variab
 
 ## Tips
 
-??? success "Keep data as small as possible"
+!!! success "Keep data as small as possible"
 
     You can reduce the number of splits by keeping the data small in the first place.  
     You can reduce the data size in exchange for image quality by specifying like `--densification_interval 500` in the options of `train.py`` of 3D Gaussian Splatting.  

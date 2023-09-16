@@ -476,6 +476,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bp_2" class="md-nav__link">
+    インポートしたBPをレベルに配置すると描画がおかしいです
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3d-gaussian-splatting" class="md-nav__link">
     3D Gaussian Splattingはフォトグラメトリの一種ですか？
   </a>
@@ -594,12 +601,18 @@
 <h2 id="bp">インポートしたBPをレベルに配置しても描画されません</h2>
 <ul>
 <li>EnbaledBlocksのいずれか一つ以上がTrueになっていることを確認してください。</li>
-<li>ビューポートのリアルタイム表示がオンになっていることを確認してください。</li>
+<li>ビューポートのリアルタイム表示がオンになっていることを確認してください。（Ctrl+R）</li>
 </ul>
 <h2 id="bp_1">インポートしたBPをレベルに配置するとクラッシュします</h2>
 <p>GPUのメモリが不足している可能性が高いです。下記をお試しください。</p>
 <ul>
 <li>BPを開き、EnbaledBlocksを一つだけ有効にする</li>
+<li>空のレベルにBPを配置して描画する</li>
+</ul>
+<h2 id="bp_2">インポートしたBPをレベルに配置すると描画がおかしいです</h2>
+<ul>
+<li><a href="../how-to-split/#morton-order">Morton Orderでの分割</a>の場合、ブロック間の描画順のソートは実行時のみ行われます。Playモードで確認してみてください。</li>
+<li><a href="../how-to-split/#_4">原点からの距離での分割</a>の場合、原点付近のブロックからのみ正しく描画されます。</li>
 </ul>
 <h2 id="3d-gaussian-splatting">3D Gaussian Splattingはフォトグラメトリの一種ですか？</h2>
 <p>いいえ。原理が大きく異なります。</p>

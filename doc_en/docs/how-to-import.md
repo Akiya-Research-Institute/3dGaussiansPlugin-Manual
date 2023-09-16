@@ -22,6 +22,10 @@
 
 Also, if necessary, set the following items under "Default" in the Details tab.
 
-2. Specify the culling range with "Bound Min" and "Bound Max".
-3. Turn off "SRGB" if the original data is in linear color. If "SRGB" is turned on, the data is treated as sRGB.
-4. Tunr on "Mesh" to draw ellipsoids of the size of the Gaussians. This is mainly used for debugging.
+- **Enabled Blocks**: Select which blocks of imported data will be displayed.
+- **Spherical Harmonics Degree**: Select the color rendering method.  
+	"Degree 0" disables the color change depending on the angle of view (no reflections, etc.).  
+	"Degrees 1-3" enable the color change with viewing angle. A higher Degree makes the rendering more accurate, but increases the rendering load.  
+- **Min translucent sort priority**: Sets the priority for rendering 3D Gaussian Splatting data.  
+	In this plug-in, 3D Gaussian Splatting data is drawn as a translucent mesh.  
+	This value is applied to the `Translucency Sort Priority` of the furthest block, and a value of (this value + number of valid blocks - 1) is applied to the nearest block.

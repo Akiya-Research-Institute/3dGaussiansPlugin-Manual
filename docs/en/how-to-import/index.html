@@ -593,11 +593,15 @@ The path must contain only alphanumeric characters.</p>
 <li>Drag and drop "Content &gt; ThreeDGaussians &gt; <em>ModelName</em> &gt; BP_3D_Gaussians_<em>ModelName</em>" onto the level in the content browser.</li>
 </ol>
 <p>Also, if necessary, set the following items under "Default" in the Details tab.</p>
-<ol>
-<li>Specify the culling range with "Bound Min" and "Bound Max".</li>
-<li>Turn off "SRGB" if the original data is in linear color. If "SRGB" is turned on, the data is treated as sRGB.</li>
-<li>Tunr on "Mesh" to draw ellipsoids of the size of the Gaussians. This is mainly used for debugging.</li>
-</ol>
+<ul>
+<li><strong>Enabled Blocks</strong>: Select which blocks of imported data will be displayed.</li>
+<li><strong>Spherical Harmonics Degree</strong>: Select the color rendering method.<br />
+    "Degree 0" disables the color change depending on the angle of view (no reflections, etc.).<br />
+    "Degrees 1-3" enable the color change with viewing angle. A higher Degree makes the rendering more accurate, but increases the rendering load.  </li>
+<li><strong>Min translucent sort priority</strong>: Sets the priority for rendering 3D Gaussian Splatting data.<br />
+    In this plug-in, 3D Gaussian Splatting data is drawn as a translucent mesh.<br />
+    This value is applied to the <code>Translucency Sort Priority</code> of the furthest block, and a value of (this value + number of valid blocks - 1) is applied to the nearest block.</li>
+</ul>
 
 
   
