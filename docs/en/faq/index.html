@@ -462,6 +462,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#how-can-i-make-packages-for-platforms-other-than-windows" class="md-nav__link">
+    How can I make packages for platforms other than Windows?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-reduce-the-package-size" class="md-nav__link">
+    How do I reduce the package size?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-get-it-to-work-with-uefn" class="md-nav__link">
+    How do I get it to work with UEFN?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#i-placed-the-imported-bp-to-a-level-but-nothing-hoppens" class="md-nav__link">
     I placed the imported BP to a level, but nothing hoppens
   </a>
@@ -478,6 +499,13 @@
         <li class="md-nav__item">
   <a href="#rendering-result-is-incorrect" class="md-nav__link">
     Rendering result is incorrect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#official-implementation-of-3d-gaussian-splatting-is-not-available-for-commercial-use-how-about-this-plugin" class="md-nav__link">
+    Official Implementation of 3D Gaussian Splatting is not available for commercial use, how about this plugin?
   </a>
   
 </li>
@@ -598,6 +626,17 @@
 
 
 <h1 id="faq">FAQ</h1>
+<h2 id="how-can-i-make-packages-for-platforms-other-than-windows">How can I make packages for platforms other than Windows?</h2>
+<p>The development team has only tested on Windows, so we cannot guarantee that it will work, but the rendering process is implemented in the standard Niagara and Material nodes, so there is a good chance that it will work on non-Windows platforms.  </p>
+<p>To create the package for non-Windows platforms, you need to add the platforms to line 22 of "C:\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\ThreeDGaussians\ThreeDGaussians.uplugin".</p>
+<h2 id="how-do-i-reduce-the-package-size">How do I reduce the package size?</h2>
+<ul>
+<li>Set the Spherical Harmonics Degree to "Degree 0".</li>
+<li>Delete "sh1" to "sh11" texture assets in the content browser.
+  You will get a reference relationship warning when deleting, but force the deletion.</li>
+</ul>
+<h2 id="how-do-i-get-it-to-work-with-uefn">How do I get it to work with UEFN?</h2>
+<p>Documentation is under construction. Please wait a while.</p>
 <h2 id="i-placed-the-imported-bp-to-a-level-but-nothing-hoppens">I placed the imported BP to a level, but nothing hoppens</h2>
 <ul>
 <li>Make sure one or more of the EnbaledBlocks are set to True.</li>
@@ -613,6 +652,13 @@
 <ul>
 <li>When <a href="../how-to-split/#split-by-morton-order">Split by Morton Order</a>, check while Play In Editor. The rendering order is sorted only during Play.</li>
 <li>When <a href="../how-to-split/#split-by-the-distance">Split by the distance</a>, the blocks are correctly rendered only when camera is placed in the block nearest to the origin.</li>
+</ul>
+<h2 id="official-implementation-of-3d-gaussian-splatting-is-not-available-for-commercial-use-how-about-this-plugin"><a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">Official Implementation of 3D Gaussian Splatting</a> is not available for commercial use, how about this plugin?</h2>
+<ul>
+<li>This plugin is implemented from scratch using Niagara and Material's node-based programming without any source code from the official implementation. (It does not even contain CUDA or HLSL source code).
+  Therefore, this plugin itself is available for commercial use just like any other product in the Unreal Engine Marketplace.</li>
+<li>However, the user is responsible for the origin of the data created by the user. Data created in a manner forbidden for commercial use cannot be used for commercial purposes.</li>
+<li>Note that in addition to the official implementation, there is an MIT-licensed <a href="https://github.com/WangFeng18/3d-gaussian-splatting">unofficial implementation</a> but it is not directly supported by this plugin.</li>
 </ul>
 <h2 id="is-3d-gaussian-splatting-a-family-of-photogrammetry">Is 3D Gaussian Splatting a family of photogrammetry?</h2>
 <p>No, the underlying mechanisms are very different.</p>

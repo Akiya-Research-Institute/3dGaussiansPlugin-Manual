@@ -462,6 +462,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows以外でも動したいです
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    パッケージサイズを減らすにはどうすればいいですか？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uefn" class="md-nav__link">
+    UEFNで動かすにはどうすればよいですか？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bp" class="md-nav__link">
     インポートしたBPをレベルに配置しても描画されません
   </a>
@@ -484,6 +505,13 @@
       
         <li class="md-nav__item">
   <a href="#3d-gaussian-splatting" class="md-nav__link">
+    3D Gaussian Splattingの公式実装は商用利用不可ですが、このプラグインはどのような扱いですか？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-gaussian-splatting_1" class="md-nav__link">
     3D Gaussian Splattingはフォトグラメトリの一種ですか？
   </a>
   
@@ -497,7 +525,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3d-gaussian-splatting_1" class="md-nav__link">
+  <a href="#3d-gaussian-splatting_2" class="md-nav__link">
     3D Gaussian Splattingは微分可能レンダリングの一種ですか？
   </a>
   
@@ -598,6 +626,17 @@
 
 
 <h1 id="faq">FAQ</h1>
+<h2 id="windows">Windows以外でも動したいです</h2>
+<p>開発チームではWindowsでのみテストを行っているので動くかどうかは保証できませんが、描画処理はNiagaraとMaterialの標準ノードで実装されているので、Windows以外でも動く可能性が高いです。</p>
+<p>パッケージを作成するには、「C:\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\ThreeDGaussians\ThreeDGaussians.uplugin」の22行目に目的のプラットフォームを追加する必要があります。</p>
+<h2 id="_1">パッケージサイズを減らすにはどうすればいいですか？</h2>
+<ul>
+<li>Spherical Harmonics Degreeを「Degree 0」に設定します。</li>
+<li>sh1からsh11のテクスチャアセットをコンテンツブラウザで削除します。
+  削除時に参照関係の警告が出ますが、強制的に削除を実行します。</li>
+</ul>
+<h2 id="uefn">UEFNで動かすにはどうすればよいですか？</h2>
+<p>ドキュメントを作成中です。お待ちください。</p>
 <h2 id="bp">インポートしたBPをレベルに配置しても描画されません</h2>
 <ul>
 <li>EnbaledBlocksのいずれか一つ以上がTrueになっていることを確認してください。</li>
@@ -614,11 +653,18 @@
 <li><a href="../how-to-split/#morton-order">Morton Orderでの分割</a>の場合、ブロック間の描画順のソートは実行時のみ行われます。Playモードで確認してみてください。</li>
 <li><a href="../how-to-split/#_4">原点からの距離での分割</a>の場合、原点付近のブロックからのみ正しく描画されます。</li>
 </ul>
-<h2 id="3d-gaussian-splatting">3D Gaussian Splattingはフォトグラメトリの一種ですか？</h2>
+<h2 id="3d-gaussian-splatting"><a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splattingの公式実装</a>は商用利用不可ですが、このプラグインはどのような扱いですか？</h2>
+<ul>
+<li>このプラグインは公式実装のソースコードは一切用いず、NiagaraとMaterialのノードベースプログラミングで一から実装されています（プラグインはCUDAやHLSLのソースコードを含んですらいません）。
+  そのため、このプラグイン自体はUnreal Engineマーケットプレイスの通常の製品と同様に商用利用が可能です。</li>
+<li>ただし、ユーザが使用するデータの出所についてはユーザ自身が責任を負う必要があります。商用利用不可な方法で作成されたデータは商用利用できません。</li>
+<li>なお、既に公式実装以外にもMITライセンスなどで<a href="https://github.com/WangFeng18/3d-gaussian-splatting">非公式実装</a>が公開されています。</li>
+</ul>
+<h2 id="3d-gaussian-splatting_1">3D Gaussian Splattingはフォトグラメトリの一種ですか？</h2>
 <p>いいえ。原理が大きく異なります。</p>
 <h2 id="3d-gaussian-splattingnerf">3D Gaussian SplattingはNeRFの一種ですか？</h2>
 <p>いいえ。原理が大きく異なります。</p>
-<h2 id="3d-gaussian-splatting_1">3D Gaussian Splattingは微分可能レンダリングの一種ですか？</h2>
+<h2 id="3d-gaussian-splatting_2">3D Gaussian Splattingは微分可能レンダリングの一種ですか？</h2>
 <p>はい。</p>
 
 
