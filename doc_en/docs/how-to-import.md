@@ -26,6 +26,9 @@ Also, if necessary, set the following items under "Default" in the Details tab.
 - **Spherical Harmonics Degree**: Select the color rendering method.  
 	"Degree 0" disables the color change depending on the angle of view (no reflections, etc.).  
 	"Degrees 1-3" enable the color change with viewing angle. A higher Degree makes the rendering more accurate, but increases the rendering load.  
+- **Albedo Tint**: Correct color. The color specified here will be multiplied by the original color.
+- **Crop** and **Crop Volume**: Enable the check box and specify the range to crop.
 - **Min translucent sort priority**: Sets the priority for rendering 3D Gaussian Splatting data.  
 	In this plug-in, 3D Gaussian Splatting data is drawn as a translucent mesh.  
 	This value is applied to the `Translucency Sort Priority` of the furthest block, and a value of (this value + number of valid blocks - 1) is applied to the nearest block.
+	

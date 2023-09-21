@@ -95,6 +95,7 @@ nav:
     - 使い方:
       - how-to-import.md
       - how-to-split.md
+      - how-to-uefn.md
     - faq.md
     - changelog.md
   - デモプロジェクト:

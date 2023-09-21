@@ -12,10 +12,6 @@ To create the package for non-Windows platforms, you need to add the platforms t
 - Delete "sh1" to "sh11" texture assets in the content browser.
   You will get a reference relationship warning when deleting, but force the deletion.
 
-## How do I get it to work with UEFN?
-
-Documentation is under construction. Please wait a while.
-
 ## I placed the imported BP to a level, but nothing hoppens
 
 - Make sure one or more of the EnbaledBlocks are set to True.

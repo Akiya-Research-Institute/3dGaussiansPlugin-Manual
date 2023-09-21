@@ -415,6 +415,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-uefn/" class="md-nav__link">
+        Migration to UEFN (experimental)
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -474,6 +488,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v11-sep-22-2023" class="md-nav__link">
+    v1.1 (Sep. 22, 2023)
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v10-sep-19-2023" class="md-nav__link">
@@ -563,6 +584,16 @@
 
 
 <h1 id="changelog">Changelog</h1>
+<!-- ## v1.2 (Sep. ??, 2023)
+- Fixed a bug that caused actor rotations not to be included in color calculations for Spherical Harmonics Degree 1 and above. -->
+
+<h2 id="v11-sep-22-2023">v1.1 (Sep. 22, 2023)</h2>
+<ul>
+<li>Added functions to crop and tweak color, which can be set from the Details tab of the BP.</li>
+<li>Revamped assets for easier migration to UEFN. See <a href="./how-to-uefn">Migrate to UEFN</a>.<br />
+  Due to this, direct hard references to some assets in "Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara" are no longer be compatible with v1.0.</li>
+<li>Fixed a bug that could cause some gaussians not to be displayed.</li>
+</ul>
 <h2 id="v10-sep-19-2023">v1.0 (Sep. 19, 2023)</h2>
 <ul>
 <li>First release.</li>

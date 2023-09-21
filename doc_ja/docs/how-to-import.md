@@ -26,6 +26,8 @@
 - **Spherical Harmonics Degree**で、色の描画方法を選択します。  
 	「Degree 0」は見る角度による色の変化を無効にします（反射などがなくなります）。  
 	「Degree 1～3」は見る角度による色の変化を有効にします。高いDegreeを指定すると描画が正確になりますが、描画負荷が上がります。
+- **Albedo Tint**で、色を補正します。ここで指定した色が元の色に乗算されます。  
+- **Crop**を有効にし、**Crop Volume**でトリミング範囲を指定します。  
 - **Min translucent sort priority**で、3D Gaussian Splattingのデータの描画の優先度を設定します。  
 	本プラグインでは、3D Gaussian Splattingのデータは半透明のメッシュとして描画されます。  
 	最も遠いブロックのTranslucency Sort Priorityにこの値が適用され、最も近いブロックには(この値 + 有効なブロック数 - 1)の値が適用されます。
