@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ja" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -12,14 +12,14 @@
         <meta name="author" content="Kenji Asaba">
       
       
-        <link rel="canonical" href="https://Akiya-Research-Institute.github.io/3dGaussiansPlugin-Manual/how-to-migrate/">
+        <link rel="canonical" href="https://Akiya-Research-Institute.github.io/3dGaussiansPlugin-Manual/how-to-unofficial/">
       
       <link rel="icon" href="../images/favicon_b.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-8.5.10">
     
     
       
-        <title>Migrate to BP projets - 3D Gaussians Plugin Manual</title>
+        <title>非公式実装から変換(実験的) - 3D Gaussians Pluginマニュアル</title>
       
     
     
@@ -86,8 +86,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrate-to-bp-projets" class="md-skip">
-          Skip to content
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
         </a>
       
     </div>
@@ -99,8 +99,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="3D Gaussians Plugin Manual" class="md-header__button md-logo" aria-label="3D Gaussians Plugin Manual" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="3D Gaussians Pluginマニュアル" class="md-header__button md-logo" aria-label="3D Gaussians Pluginマニュアル" data-md-component="logo">
       
   <img src="../images/favicon_w.png" alt="logo">
 
@@ -112,13 +112,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            3D Gaussians Plugin Manual
+            3D Gaussians Pluginマニュアル
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Migrate to BP projets
+              非公式実装から変換(実験的)
             
           </span>
         </div>
@@ -204,7 +204,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -215,7 +215,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -227,7 +227,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            検索を初期化
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -261,14 +261,14 @@
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="3D Gaussians Plugin Manual" class="md-nav__button md-logo" aria-label="3D Gaussians Plugin Manual" data-md-component="logo">
+    <a href=".." title="3D Gaussians Pluginマニュアル" class="md-nav__button md-logo" aria-label="3D Gaussians Pluginマニュアル" data-md-component="logo">
       
   <img src="../images/favicon_w.png" alt="logo">
 
     </a>
-    3D Gaussians Plugin Manual
+    3D Gaussians Pluginマニュアル
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -292,14 +292,14 @@
       
       
         <label class="md-nav__link" for="__nav_1">
-          Plugin
+          プラグイン
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Plugin" data-md-level="1">
+      <nav class="md-nav" aria-label="プラグイン" data-md-level="1">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
-          Plugin
+          プラグイン
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -310,7 +310,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        What is 3D Gaussians Plugin?
+        3D Gaussians Pluginって何？
       </a>
     </li>
   
@@ -324,7 +324,7 @@
   
     <li class="md-nav__item">
       <a href="../system-requirement/" class="md-nav__link">
-        System Requirements
+        システム要件
       </a>
     </li>
   
@@ -338,7 +338,7 @@
   
     <li class="md-nav__item">
       <a href="../install/" class="md-nav__link">
-        Installation
+        インストール方法
       </a>
     </li>
   
@@ -352,7 +352,7 @@
   
     <li class="md-nav__item">
       <a href="../modules/" class="md-nav__link">
-        Modules
+        モジュール構成
       </a>
     </li>
   
@@ -374,14 +374,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_5">
-          How to use
+          使い方
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="How to use" data-md-level="2">
+      <nav class="md-nav" aria-label="使い方" data-md-level="2">
         <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
-          How to use
+          使い方
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -392,7 +392,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-import/" class="md-nav__link">
-        Import and place to level
+        インポートとレベルへの配置
       </a>
     </li>
   
@@ -406,7 +406,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-split/" class="md-nav__link">
-        Adjust block split rule
+        ブロックの分割の調整
       </a>
     </li>
   
@@ -420,7 +420,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-uefn/" class="md-nav__link">
-        Migration to UEFN (Experimental)
+        UEFNへの移行(実験的)
       </a>
     </li>
   
@@ -455,7 +455,7 @@
   
     <li class="md-nav__item">
       <a href="../changelog/" class="md-nav__link">
-        Changelog
+        更新履歴
       </a>
     </li>
   
@@ -487,14 +487,14 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          Demo Project
+          デモプロジェクト
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Demo Project" data-md-level="1">
+      <nav class="md-nav" aria-label="デモプロジェクト" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Demo Project
+          デモプロジェクト
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -505,7 +505,7 @@
   
     <li class="md-nav__item">
       <a href="../demo-project-overview/" class="md-nav__link">
-        Demo of example scenes
+        サンプルシーンのデモ
       </a>
     </li>
   
@@ -533,15 +533,39 @@
                   
 
 
-<h1 id="migrate-to-bp-projets">Migrate to BP projets</h1>
-<p>The C++ module included in this plug-in is only used for the import process.<br />
-Therefore, imported data can be migrated to a BP project that does not contain C++.</p>
-<p><img alt="" loading="lazy" src="../images/how-to-migrate.png" />  </p>
+<h1 id="_1">非公式実装から変換(実験的)</h1>
+<p>3D Gaussian Splattingの公式実装は商用利用不可ですが、商用利用可能なライセンスで公開されている非公式実装があります。<br />
+非公式実装で生成したモデルのフォーマットを変換することで、このプラグインで使用できるようになります。</p>
+<h2 id="taichi_3d_gaussian_splatting"><a href="https://github.com/wanmeihuali/taichi_3d_gaussian_splatting">taichi_3d_gaussian_splatting</a>からの変換</h2>
+<p><img alt="" loading="lazy" src="../images/taichi-convert-script.png" />  </p>
 <ol>
-<li>Right-click "BP_3D_Gaussians_<em>ModelName</em>" under "Content &gt; ThreeDGaussians &gt; <em>ModelName</em>" in the content browser</li>
-<li>Select "Asset Actions &gt; Migrate..." and click "OK" in the dialog box</li>
-<li>Select the content folder of the BP project to be migrated</li>
+<li><a href="https://colab.research.google.com/drive/1agmqiuLH9W9PkG6zG8VVgVySBiJ-vxXA?usp=sharing">変換用スクリプト</a>を開きます。</li>
+<li>スクリプトの実行ボタンを押し、ファイル選択ボタンを押して学習結果のparquetファイルをアップロードします。</li>
+<li>自動的に変換が始まり、完了するとplyファイルがダウンロードされます。</li>
+<li>
+<p>「<a href="../how-to-import/#_2">インポート</a>」の通りにplyモデルをインポートします。</p>
+<p><img alt="" loading="lazy" src="../images/taichi-convert-sigmoid.png" />  </p>
+</li>
+<li>
+<p>モデルBPのDetailsパネルで「Default &gt; Advanced &gt; Apply Sigmoid to Color」を有効にします。</p>
+</li>
 </ol>
+<div class="admonition tip">
+<p class="admonition-title">ローカル環境での変換</p>
+<p>変換用スクリプトをローカル環境で実行するには下記の手順を実行します。これはファイルサイズが大きい場合に特に有効です。</p>
+<ol>
+<li>Python環境で下記のパッケージをインストールします。
+    <div class="highlight"><pre><span></span><code>pip install pandas, numpy, plyfile
+</code></pre></div></li>
+<li>変換用スクリプトのコードブロックでShow codeをクリックし、15～48行目をローカルのテキストファイルにコピーし、名前をconvert.pyとします。</li>
+<li>convert.pyファイルの先頭に対象ファイルのパスを追記します。
+    <div class="highlight"><pre><span></span><code>path = &#39;/path/to/your/file.parquet&#39;
+</code></pre></div></li>
+<li>convert.pyを実行します。
+    <div class="highlight"><pre><span></span><code>python convert.py
+</code></pre></div></li>
+</ol>
+</div>
 
 
   
@@ -619,7 +643,7 @@ Therefore, imported data can be migrated to a BP project that does not contain C
       
       
     
-    <a href="https://www.unrealengine.com/marketplace/en/product/410c8105b3aa41d38ab68660295bd7f3" target="_blank" rel="noopener" title="www.unrealengine.com" class="md-social__link">
+    <a href="https://www.unrealengine.com/marketplace/ja/product/410c8105b3aa41d38ab68660295bd7f3" target="_blank" rel="noopener" title="www.unrealengine.com" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18H6v-4h6m9 0v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6m0-10H4v2h16V4Z"/></svg>
     </a>
   
@@ -634,7 +658,7 @@ Therefore, imported data can be migrated to a BP project that does not contain C
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>

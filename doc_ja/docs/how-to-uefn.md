@@ -1,4 +1,4 @@
-# UEFNへの移行（実験的）
+# UEFNへの移行(実験的)
 
 UEFNではBPが使用できないため、下記の制約があります。
 
@@ -13,9 +13,8 @@ UEFNではBPが使用できないため、下記の制約があります。
 
 1. コンテンツブラウザで「Engine > Plugins > 3D Gaussians Content > Niagara > NS_3D_Gaussians_sh0」を右クリックします。
 2. 「Asset Actions > Migrate...」を選択し、表示されたダイアログで「ThreeDGaussians」にチェックを付けて、OKをクリックします。
-3. 移行先のUEFNプロジェクトのコンテンツフォルダを選択します。
-4. 「[インポート](../how-to-import/#_2)」の通りにモデルをインポートします。
-5. 「Content > ThreeDGaussians > モデル名 > ブロック番号」の下の「position」「rotation」「scaleAndOpacity」「sh_0」についても、移行先のUEFNプロジェクトに移行します。
+3. 移行先のUEFNプロジェクトのコンテンツフォルダを選択し、移行します。
+4. 「[インポート](../how-to-import/#_2)」の通りにモデルをインポートし、「Content > ThreeDGaussians > モデル名 > ブロック番号」の下の「position」「rotation」「scaleAndOpacity」「sh_0」についても、移行先のUEFNプロジェクトに移行します。
 
 ## UEFNプロジェクトでの操作
 

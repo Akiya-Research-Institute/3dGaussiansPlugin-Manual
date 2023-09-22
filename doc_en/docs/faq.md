@@ -33,7 +33,7 @@ Most likely there is not enough memory on the GPU. Please try the following
 
 Since our implementation is fundamentally different from the official implementation of the viewer, rendering results do not always match.
 
-One way to increase the rendering accuracy is to open "Engine > Plugins > 3D Gaussians Content > Niagara > NMS_SetConicCov2d" in the content browser and set the value of the "Make Float" node at the bottom right of the graph, which is commented "up to 5 sigma", to a large value such as 10.
+One way to increase the rendering accuracy is to open "Engine > Plugins > 3D Gaussians Content > Niagara > NMS_SetConicCov2d" in the content browser and set the "B" value of the "Multiply" node at the bottom right of the graph, which is commented "up to N sigma", to a large value such as 10.
 
 This will increase the size of the sprite on which gaussians are rendered and ensure that the edges of the gaussians are rendered correctly.
 
@@ -43,6 +43,7 @@ This will increase the size of the sprite on which gaussians are rendered and en
   Therefore, this plugin itself is available for commercial use just like any other product in the Unreal Engine Marketplace.
 - However, the user is responsible for the origin of the data created by the user. Data created in a manner forbidden for commercial use cannot be used for commercial purposes.
 - Note that in addition to the official implementation, there is an MIT-licensed [unofficial implementation](https://github.com/WangFeng18/3d-gaussian-splatting) but it is not directly supported by this plugin.
+<!-- - There is an Apache-2.0-licensed [unofficial implementation](https://github.com/wanmeihuali/taichi_3d_gaussian_splatting) and a [conversion script](https://colab.research.google.com/drive/1agmqiuLH9W9PkG6zG8VVgVySBiJ-vxXA?usp=sharing) which converts the format of the training results of the unofficial implementation to the official one. -->
 
 ## Is 3D Gaussian Splatting a family of photogrammetry?
 

@@ -1,4 +1,4 @@
-# Migration to UEFN (experimental)
+# Migration to UEFN (Experimental)
 
 Since BP is not available in UEFN, we have the following restrictions
 
@@ -13,9 +13,8 @@ Currently, only Fortnite for Windows PC has been tested.
 
 1. Right-click "Engine > Plugins > 3D Gaussians Content > Niagara > NS_3D_Gaussians_sh0" in the content browser.
 2. Select "Asset Actions > Migrate...", check "ThreeDGaussians" in the dialog box, and click OK. 
-3. Select the contents folder of the destination UEFN project.
-4. Import a model to a UE project as described in "[Import](../how-to-import/#import)" section.
-5. Migrate "position", "rotation", "scaleAndOpacity" and "sh_0" in "Content > ThreeDGaussians > Model Name > Block Number" to the destination UEFN project.
+3. Select the contents folder of the destination UEFN project to migrate.
+4. Import a model to a UE project as described in "[Import](../how-to-import/#import)" section, and migrate "position", "rotation", "scaleAndOpacity" and "sh_0" in "Content > ThreeDGaussians > Model Name > Block Number" to the destination UEFN project.
 
 ## Operation in the UEFN project
 

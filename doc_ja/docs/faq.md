@@ -33,7 +33,7 @@ GPUのメモリが不足している可能性が高いです。下記をお試�
 
 公式実装のビューアとは実装が根本的に異なるので、描画結果は必ずしも一致しません。
 
-描画精度を上げる一つの方法は、コンテンツブラウザで「Engine > Plugins > 3D Gaussians Content > Niagara > NMS_SetConicCov2d」を開いて、グラフの右下の方の「up to 5 sigma」とコメントされているMake Floatの値を10などの大きな値にすることです。
+描画精度を上げる一つの方法は、コンテンツブラウザで「Engine > Plugins > 3D Gaussians Content > Niagara > NMS_SetConicCov2d」を開いて、グラフの右下の方の「up to N sigma」とコメントされているMultiplyノードのBの値を10などの大きな値にすることです。
 
 これにより、ガウス分布を描画するときのスプライトのサイズが大きくなり、ガウス分布の端まで正しく描画されるようになります。
 
@@ -42,7 +42,8 @@ GPUのメモリが不足している可能性が高いです。下記をお試�
 - このプラグインは公式実装のソースコードは一切用いず、NiagaraとMaterialのノードベースプログラミングで一から実装されています（プラグインはCUDAやHLSLのソースコードを含んですらいません）。
   そのため、このプラグイン自体はUnreal Engineマーケットプレイスの通常の製品と同様に商用利用が可能です。
 - ただし、ユーザが使用するデータの出所についてはユーザ自身が責任を負う必要があります。商用利用不可な方法で作成されたデータは商用利用できません。
-- なお、既に公式実装以外にもMITライセンスなどで[非公式実装](https://github.com/WangFeng18/3d-gaussian-splatting)が公開されています。
+- なお、既に公式実装以外にもMITライセンスなどで[非公式実装](https://github.com/WangFeng18/3d-gaussian-splatting)が公開されています
+<!-- - なお、既に公式実装以外にもApache-2.0ライセンスで[非公式実装](https://github.com/wanmeihuali/taichi_3d_gaussian_splatting)が公開されています。また、非公式実装のトレーニング結果のフォーマットを公式のものに変換する[変換用スクリプト](https://colab.research.google.com/drive/1agmqiuLH9W9PkG6zG8VVgVySBiJ-vxXA?usp=sharing)が公開されています。 -->
 
 ## 3D Gaussian Splattingはフォトグラメトリの一種ですか？
 

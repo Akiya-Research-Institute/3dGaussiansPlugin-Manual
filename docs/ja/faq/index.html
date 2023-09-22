@@ -422,7 +422,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-uefn/" class="md-nav__link">
-        UEFNへの移行（実験的）
+        UEFNへの移行(実験的)
       </a>
     </li>
   
@@ -667,15 +667,17 @@
 </ul>
 <h2 id="_2">レンダリングの結果が公式ビューアと一致しません</h2>
 <p>公式実装のビューアとは実装が根本的に異なるので、描画結果は必ずしも一致しません。</p>
-<p>描画精度を上げる一つの方法は、コンテンツブラウザで「Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NMS_SetConicCov2d」を開いて、グラフの右下の方の「up to 5 sigma」とコメントされているMake Floatの値を10などの大きな値にすることです。</p>
+<p>描画精度を上げる一つの方法は、コンテンツブラウザで「Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NMS_SetConicCov2d」を開いて、グラフの右下の方の「up to N sigma」とコメントされているMultiplyノードのBの値を10などの大きな値にすることです。</p>
 <p>これにより、ガウス分布を描画するときのスプライトのサイズが大きくなり、ガウス分布の端まで正しく描画されるようになります。</p>
 <h2 id="3d-gaussian-splatting"><a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splattingの公式実装</a>は商用利用不可ですが、このプラグインはどのような扱いですか？</h2>
 <ul>
 <li>このプラグインは公式実装のソースコードは一切用いず、NiagaraとMaterialのノードベースプログラミングで一から実装されています（プラグインはCUDAやHLSLのソースコードを含んですらいません）。
   そのため、このプラグイン自体はUnreal Engineマーケットプレイスの通常の製品と同様に商用利用が可能です。</li>
 <li>ただし、ユーザが使用するデータの出所についてはユーザ自身が責任を負う必要があります。商用利用不可な方法で作成されたデータは商用利用できません。</li>
-<li>なお、既に公式実装以外にもMITライセンスなどで<a href="https://github.com/WangFeng18/3d-gaussian-splatting">非公式実装</a>が公開されています。</li>
+<li>なお、既に公式実装以外にもMITライセンスなどで<a href="https://github.com/WangFeng18/3d-gaussian-splatting">非公式実装</a>が公開されています</li>
 </ul>
+<!-- - なお、既に公式実装以外にもApache-2.0ライセンスで[非公式実装](https://github.com/wanmeihuali/taichi_3d_gaussian_splatting)が公開されています。また、非公式実装のトレーニング結果のフォーマットを公式のものに変換する[変換用スクリプト](https://colab.research.google.com/drive/1agmqiuLH9W9PkG6zG8VVgVySBiJ-vxXA?usp=sharing)が公開されています。 -->
+
 <h2 id="3d-gaussian-splatting_1">3D Gaussian Splattingはフォトグラメトリの一種ですか？</h2>
 <p>いいえ。原理が大きく異なります。</p>
 <h2 id="3d-gaussian-splattingnerf">3D Gaussian SplattingはNeRFの一種ですか？</h2>
@@ -704,7 +706,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="../how-to-uefn/" class="md-footer__link md-footer__link--prev" aria-label="前: UEFNへの移行（実験的）" rel="prev">
+        <a href="../how-to-uefn/" class="md-footer__link md-footer__link--prev" aria-label="前: UEFNへの移行(実験的)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -713,7 +715,7 @@
               <span class="md-footer__direction">
                 前
               </span>
-              UEFNへの移行（実験的）
+              UEFNへの移行(実験的)
             </div>
           </div>
         </a>
