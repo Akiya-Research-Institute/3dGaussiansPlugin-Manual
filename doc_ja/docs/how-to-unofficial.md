@@ -10,10 +10,10 @@
 1. [変換用スクリプト](https://colab.research.google.com/drive/1agmqiuLH9W9PkG6zG8VVgVySBiJ-vxXA?usp=sharing)を開きます。
 2. スクリプトの実行ボタンを押し、ファイル選択ボタンを押して学習結果のparquetファイルをアップロードします。
 3. 自動的に変換が始まり、完了するとplyファイルがダウンロードされます。
-4. 「[インポート](../how-to-import/#_2)」の通りにplyモデルをインポートします。
 
     ![](images/taichi-convert-sigmoid.png){ loading=lazy }  
 
+4. 「[インポート](../how-to-import/#_2)」の通りにplyモデルをインポートします。
 5. モデルBPのDetailsパネルで「Default > Advanced > Apply Sigmoid to Color」を有効にします。
 
 !!! Tip "ローカル環境での変換"

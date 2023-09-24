@@ -42,8 +42,7 @@ This will increase the size of the sprite on which gaussians are rendered and en
 - This plugin is implemented from scratch using Niagara and Material's node-based programming without any source code from the official implementation. (It does not even contain CUDA or HLSL source code).
   Therefore, this plugin itself is available for commercial use just like any other product in the Unreal Engine Marketplace.
 - However, the user is responsible for the origin of the data created by the user. Data created in a manner forbidden for commercial use cannot be used for commercial purposes.
-- Note that in addition to the official implementation, there is an MIT-licensed [unofficial implementation](https://github.com/WangFeng18/3d-gaussian-splatting) but it is not directly supported by this plugin.
-<!-- - There is an Apache-2.0-licensed [unofficial implementation](https://github.com/wanmeihuali/taichi_3d_gaussian_splatting) and a [conversion script](https://colab.research.google.com/drive/1agmqiuLH9W9PkG6zG8VVgVySBiJ-vxXA?usp=sharing) which converts the format of the training results of the unofficial implementation to the official one. -->
+- There is an Apache-2.0-licensed [unofficial implementation](https://github.com/wanmeihuali/taichi_3d_gaussian_splatting). See [Convert from unofficial implementation](../how-to-unofficial).
 
 ## Is 3D Gaussian Splatting a family of photogrammetry?
 

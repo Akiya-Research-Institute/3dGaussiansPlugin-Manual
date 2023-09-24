@@ -42,8 +42,7 @@ GPUのメモリが不足している可能性が高いです。下記をお試�
 - このプラグインは公式実装のソースコードは一切用いず、NiagaraとMaterialのノードベースプログラミングで一から実装されています（プラグインはCUDAやHLSLのソースコードを含んですらいません）。
   そのため、このプラグイン自体はUnreal Engineマーケットプレイスの通常の製品と同様に商用利用が可能です。
 - ただし、ユーザが使用するデータの出所についてはユーザ自身が責任を負う必要があります。商用利用不可な方法で作成されたデータは商用利用できません。
-- なお、既に公式実装以外にもMITライセンスなどで[非公式実装](https://github.com/WangFeng18/3d-gaussian-splatting)が公開されています
-<!-- - なお、既に公式実装以外にもApache-2.0ライセンスで[非公式実装](https://github.com/wanmeihuali/taichi_3d_gaussian_splatting)が公開されています。また、非公式実装のトレーニング結果のフォーマットを公式のものに変換する[変換用スクリプト](https://colab.research.google.com/drive/1agmqiuLH9W9PkG6zG8VVgVySBiJ-vxXA?usp=sharing)が公開されています。 -->
+- なお、既に公式実装以外にもApache-2.0ライセンスで[非公式実装](https://github.com/wanmeihuali/taichi_3d_gaussian_splatting)が公開されています。[非公式実装からの変換](../how-to-unofficial)をご覧ください。
 
 ## 3D Gaussian Splattingはフォトグラメトリの一種ですか？
 

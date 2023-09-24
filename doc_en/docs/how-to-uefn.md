@@ -30,11 +30,8 @@ Currently, only Fortnite for Windows PC has been tested.
 5. In the Scalability settings, set "Epic" for Effects.
 
 !!! Warning "How to crop in UEFN"
-	Currently you cannot specify crop translation and rotation in UEFN.  
-	This will be changed in v1.2.  
-	(The matrix will be divided to Vector3 and Quaternion.)
 
-<!-- You can specify crop translation, rotation, and extent in UEFN.  
-The problem is it is really difficult to find proper values for these variables in UEFN.  
-It is recommended to find these vaules in UE and copy-paste them into UEFN.  
-Note that rotaion is in Quaternion. -->
+	You can specify crop translation, rotation, and extent in UEFN.  
+	The problem is it is really difficult to find proper values for these variables in UEFN.  
+	It is recommended to find these vaules in UE and copy-paste them into UEFN.  
+	Note that rotaion is in Quaternion.
