@@ -32,7 +32,8 @@
 - **Min translucent sort priority**で、3D Gaussian Splattingのデータの描画の優先度を設定します。  
 	本プラグインでは、3D Gaussian Splattingのデータは半透明のメッシュとして描画されます。  
 	最も遠いブロックのTranslucency Sort Priorityにこの値が適用され、最も近いブロックには`この値 + 有効なブロック数 - 1`の値が適用されます。
-- **Advanced > Lit**で、光を受けるかを設定します。オンにするとLit・Translucentなマテリアルとして、オフにするとUnlit・Translucentなマテリアルとして描画ｓれます。  
+- **Advanced > Lit**で、光を受けるかを設定します。  
+	オンにするとLit・Translucentなマテリアルとして、オフにするとUnlit・Translucentなマテリアルとして描画されます。  
 
 !!! Warning "v1.2以前からのトリミング範囲の移行"
 	v1.2以前で使用されていたCrop Volumeは非推奨となりました。将来的に削除される可能性があります。  
