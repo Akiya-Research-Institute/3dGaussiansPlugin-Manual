@@ -504,6 +504,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v13-oct-6-2023" class="md-nav__link">
+    v1.3 (Oct. 6, 2023)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12-sep-24-2023" class="md-nav__link">
     v1.2 (Sep. 24, 2023)
   </a>
@@ -605,6 +612,21 @@
 
 
 <h1 id="changelog">Changelog</h1>
+<h2 id="v13-oct-6-2023">v1.3 (Oct. 6, 2023)</h2>
+<ul>
+<li>Added experimental support for lighting. Lit/Translucent material is now supported, but problems occurs under certain conditions. <a href="../how-to-import#known-issues">See the details</a>.<ul>
+<li>Lumen is not supported.<ul>
+<li>You can receive the light from Global Illumination, but the brightness may be unstable over time. Also, it cannot emit GI light.</li>
+</ul>
+</li>
+<li>Shadows are not supported for both receive and cast.</li>
+</ul>
+</li>
+<li>You can now specify the croppping range by combining multiple volumes.</li>
+<li>Added a fcuntion to hide data in specified ranges. Similar to croppping, it can be specified by combining multiple volumes.</li>
+<li>Fixed a bug that caused the editor would crash during import if the folder structure was under certain conditions.</li>
+<li>Fixed a bug that caused the incorrect sprite size when the FOV is changed from 90 degrees.</li>
+</ul>
 <h2 id="v12-sep-24-2023">v1.2 (Sep. 24, 2023)</h2>
 <ul>
 <li>Added supports for UE 5.1 and 5.2.</li>

@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.3 (Oct. 6, 2023)
+
+- Added experimental support for lighting. Lit/Translucent material is now supported, but problems occurs under certain conditions. [See the details](../how-to-import#known-issues).
+    - Lumen is not supported.
+        - You can receive the light from Global Illumination, but the brightness may be unstable over time. Also, it cannot emit GI light.
+    - Shadows are not supported for both receive and cast.
+- You can now specify the croppping range by combining multiple volumes.
+- Added a fcuntion to hide data in specified ranges. Similar to croppping, it can be specified by combining multiple volumes.
+- Fixed a bug that caused the editor would crash during import if the folder structure was under certain conditions.
+- Fixed a bug that caused the incorrect sprite size when the FOV is changed from 90 degrees.
+
 ## v1.2 (Sep. 24, 2023)
 - Added supports for UE 5.1 and 5.2.
 - Added options to treat colors as sRGB or linear, which can be set from the Details tab in BP.

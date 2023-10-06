@@ -14,14 +14,14 @@ To create the package for non-Windows platforms, you need to add the platforms t
 
 ## I placed the imported BP to a level, but nothing hoppens
 
-- Make sure one or more of the EnbaledBlocks are set to True.
+- Make sure one or more of the Enabled Blocks are set to True.
 - Make sure that the real-time rendering of viewport is turned on. (Ctrl+R)
 
 ## Editor crashes when I placed the imported BP to a level
 
 Most likely there is not enough memory on the GPU. Please try the following
 
-- Enable only one or a few of EnbaledBlocks
+- Enable only one or a few of Enabled Blocks
 - Place BP on an empty level
 
 ## Rendering result is incorrect
