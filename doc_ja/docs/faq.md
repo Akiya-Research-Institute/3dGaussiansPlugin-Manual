@@ -33,8 +33,7 @@ GPUのメモリが不足している可能性が高いです。下記をお試�
 
 公式実装のビューアとは実装が根本的に異なるので、描画結果は必ずしも一致しません。
 
-描画精度を上げる一つの方法は、コンテンツブラウザで「Engine > Plugins > 3D Gaussians Content > Niagara > NMS_SetConicCov2d」を開いて、グラフの右下の方の「up to N sigma」とコメントされているMultiplyノードのBの値を10などの大きな値にすることです。
-
+描画精度を上げる一つの方法は、BPのDetailsパネルで「Sprite Size」を大きくすることです。  
 これにより、ガウス分布を描画するときのスプライトのサイズが大きくなり、ガウス分布の端まで正しく描画されるようになります。
 
 ## [3D Gaussian Splattingの公式実装](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/)は商用利用不可ですが、このプラグインはどのような扱いですか？

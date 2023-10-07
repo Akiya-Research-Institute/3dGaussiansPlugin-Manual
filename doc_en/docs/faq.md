@@ -33,8 +33,7 @@ Most likely there is not enough memory on the GPU. Please try the following
 
 Since our implementation is fundamentally different from the official implementation of the viewer, rendering results do not always match.
 
-One way to increase the rendering accuracy is to open "Engine > Plugins > 3D Gaussians Content > Niagara > NMS_SetConicCov2d" in the content browser and set the "B" value of the "Multiply" node at the bottom right of the graph, which is commented "up to N sigma", to a large value such as 10.
-
+One way to increase the rendering accuracy is to increase "Sprite Size" in Details tab of the BP.  
 This will increase the size of the sprite on which gaussians are rendered and ensure that the edges of the gaussians are rendered correctly.
 
 ## [Official Implementation of 3D Gaussian Splatting](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) is not available for commercial use, how about this plugin?

@@ -681,8 +681,8 @@
 </ul>
 <h2 id="rendering-results-do-not-match-the-official-viewer">Rendering results do not match the official viewer</h2>
 <p>Since our implementation is fundamentally different from the official implementation of the viewer, rendering results do not always match.</p>
-<p>One way to increase the rendering accuracy is to open "Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NMS_SetConicCov2d" in the content browser and set the "B" value of the "Multiply" node at the bottom right of the graph, which is commented "up to N sigma", to a large value such as 10.</p>
-<p>This will increase the size of the sprite on which gaussians are rendered and ensure that the edges of the gaussians are rendered correctly.</p>
+<p>One way to increase the rendering accuracy is to increase "Sprite Size" in Details tab of the BP.<br />
+This will increase the size of the sprite on which gaussians are rendered and ensure that the edges of the gaussians are rendered correctly.</p>
 <h2 id="official-implementation-of-3d-gaussian-splatting-is-not-available-for-commercial-use-how-about-this-plugin"><a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">Official Implementation of 3D Gaussian Splatting</a> is not available for commercial use, how about this plugin?</h2>
 <ul>
 <li>This plugin is implemented from scratch using Niagara and Material's node-based programming without any source code from the official implementation. (It does not even contain CUDA or HLSL source code).

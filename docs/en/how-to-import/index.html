@@ -640,18 +640,29 @@ The path must contain only alphanumeric characters.</p>
     "Degree 0" disables the color change depending on the angle of view (no reflections, etc.).<br />
     "Degrees 1-3" enable the color change with viewing angle. A higher Degree makes the rendering more accurate, but increases the rendering load.  </li>
 <li><strong>Albedo Tint</strong>: Correct color. The color specified here will be multiplied by the original color.</li>
+<li><strong>Min translucent sort priority</strong>: Sets the priority for rendering 3D Gaussian Splatting data.<br />
+    In this plug-in, 3D Gaussian Splatting data is drawn as a translucent mesh.<br />
+    This value is applied to the <code>Translucency Sort Priority</code> of the furthest block, and a value of (this value + number of valid blocks - 1) is applied to the nearest block.</li>
 <li><strong>Crop Volumes</strong>: Add elements and specify the cropping range.<br />
     Gaussians outside the range specified here will not be rendered.</li>
 <li><strong>Kill Volumes</strong>: Add elements and specify hidden ranges.<br />
     Gaussians inside the range specified here will not be rendered.</li>
-<li><strong>Min translucent sort priority</strong>: Sets the priority for rendering 3D Gaussian Splatting data.<br />
-    In this plug-in, 3D Gaussian Splatting data is drawn as a translucent mesh.<br />
-    This value is applied to the <code>Translucency Sort Priority</code> of the furthest block, and a value of (this value + number of valid blocks - 1) is applied to the nearest block.</li>
+<li><strong>Sprite Size</strong>: Adjust the size of the sprite that draws the Gaussian distribution.<br />
+    Increasing this value allows accurate rendering to the edges of the Gaussian distribution. However, this increases the number of overlapping sprites and increases the drawing load.  </li>
+<li><strong>Advanced &gt; VR</strong>: Turn on to support VR.<br />
+    When turned on, the rendering load will increase slightly.</li>
+<li><strong>Advanced &gt; Lit</strong>: Turn on to support lighting.<br />
+    When turned on, Lit/Translucent material is used. When turned off, Unlit/Translucent material is used.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Migrate cropping range from v1.2 or earlier</p>
 <p>"Crop Volume", which was used in v1.2 and earlier, has been deprecated. It may be removed in the future.<br />
 Please disable "Crop" under DEPRECATED and use the new "Crop Volumes".</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">VR mode supports only Spherical Harmonics Degree 0</p>
+<p>Currently, even if you select Degree 1 to 3, it will be rendered as Degree 0 when you turn on VR.
+We plan to eventually support Degree 1 to 3 as well.</p>
 </div>
 <h3 id="known-issues">Known issues</h3>
 <div class="admonition failure">

@@ -640,11 +640,14 @@
     「Degree 0」は見る角度による色の変化を無効にします（反射などがなくなります）。<br />
     「Degree 1～3」は見る角度による色の変化を有効にします。高いDegreeを指定すると描画が正確になりますが、描画負荷が上がります。</li>
 <li><strong>Albedo Tint</strong>で、色を補正します。ここで指定した色が元の色に乗算されます。  </li>
-<li><strong>Crop Volumes</strong>に要素を追加し、トリミング範囲を指定します。ここで指定した範囲の外は描画されなくなります。  </li>
-<li><strong>Kill Volumes</strong>に要素を追加し、非表示の範囲を指定します。ここで指定した範囲の中は描画されなくなります。  </li>
 <li><strong>Min translucent sort priority</strong>で、3D Gaussian Splattingのデータの描画の優先度を設定します。<br />
     本プラグインでは、3D Gaussian Splattingのデータは半透明のメッシュとして描画されます。<br />
     最も遠いブロックのTranslucency Sort Priorityにこの値が適用され、最も近いブロックには<code>この値 + 有効なブロック数 - 1</code>の値が適用されます。</li>
+<li><strong>Crop Volumes</strong>に要素を追加し、トリミング範囲を指定します。ここで指定した範囲の外は描画されなくなります。  </li>
+<li><strong>Kill Volumes</strong>に要素を追加し、非表示の範囲を指定します。ここで指定した範囲の中は描画されなくなります。  </li>
+<li><strong>Sprite Size</strong>でガウス分布を描画するスプライトのサイズを調整します。<br />
+    この値を大きくするとガウス分布の端まで正しく描画されるようになり描画精度が向上します。ただし、それだけスプライトの重なりが多くなり描画負荷が増大します。  </li>
+<li><strong>Advanced &gt; VR</strong>で、VR対応をオンにするかを設定します。VR対応にすると描画負荷が少し増加します。  </li>
 <li><strong>Advanced &gt; Lit</strong>で、光を受けるかを設定します。<br />
     オンにするとLit・Translucentなマテリアルとして、オフにするとUnlit・Translucentなマテリアルとして描画されます。  </li>
 </ul>
@@ -652,6 +655,11 @@
 <p class="admonition-title">v1.2以前からのトリミング範囲の移行</p>
 <p>v1.2以前で使用されていたCrop Volumeは非推奨となりました。将来的に削除される可能性があります。<br />
 DEPRECATEDの下の"Crop"を無効にし、新しいCrop Volumesをご使用ください。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">現在、VRはSpherical Harmonics Degree 0のみに対応</p>
+<p>現状、Degree1～3を選択しても、VRをオンにするとDegree 0として描画されます。<br />
+Degree1～3には順次対応予定です。</p>
 </div>
 <h3 id="_4">既知の問題</h3>
 <div class="admonition failure">

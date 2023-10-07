@@ -27,17 +27,27 @@ Also, if necessary, set the following items under "Default" in the Details tab.
 	"Degree 0" disables the color change depending on the angle of view (no reflections, etc.).  
 	"Degrees 1-3" enable the color change with viewing angle. A higher Degree makes the rendering more accurate, but increases the rendering load.  
 - **Albedo Tint**: Correct color. The color specified here will be multiplied by the original color.
+- **Min translucent sort priority**: Sets the priority for rendering 3D Gaussian Splatting data.  
+	In this plug-in, 3D Gaussian Splatting data is drawn as a translucent mesh.  
+	This value is applied to the `Translucency Sort Priority` of the furthest block, and a value of (this value + number of valid blocks - 1) is applied to the nearest block.
 - **Crop Volumes**: Add elements and specify the cropping range.  
 	Gaussians outside the range specified here will not be rendered.
 - **Kill Volumes**: Add elements and specify hidden ranges.  
 	Gaussians inside the range specified here will not be rendered.
-- **Min translucent sort priority**: Sets the priority for rendering 3D Gaussian Splatting data.  
-	In this plug-in, 3D Gaussian Splatting data is drawn as a translucent mesh.  
-	This value is applied to the `Translucency Sort Priority` of the furthest block, and a value of (this value + number of valid blocks - 1) is applied to the nearest block.
-	
+- **Sprite Size**: Adjust the size of the sprite that draws the Gaussian distribution.  
+	Increasing this value allows accurate rendering to the edges of the Gaussian distribution. However, this increases the number of overlapping sprites and increases the drawing load.  
+- **Advanced > VR**: Turn on to support VR.  
+	When turned on, the rendering load will increase slightly.
+- **Advanced > Lit**: Turn on to support lighting.  
+	When turned on, Lit/Translucent material is used. When turned off, Unlit/Translucent material is used.
+
 !!! Warning "Migrate cropping range from v1.2 or earlier"
 	"Crop Volume", which was used in v1.2 and earlier, has been deprecated. It may be removed in the future.  
 	Please disable "Crop" under DEPRECATED and use the new "Crop Volumes".
+
+!!! Warning "VR mode supports only Spherical Harmonics Degree 0"
+	Currently, even if you select Degree 1 to 3, it will be rendered as Degree 0 when you turn on VR.
+	We plan to eventually support Degree 1 to 3 as well.
 
 ### Known issues
 

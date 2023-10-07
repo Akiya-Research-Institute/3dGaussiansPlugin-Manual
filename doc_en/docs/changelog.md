@@ -1,7 +1,13 @@
 # Changelog
 
-## v1.3 (Oct. 6, 2023)
+## v1.4 (Oct. 7, 2023)
+- Added experimental support for VR.
+    - Turn on "Advanced > VR" in details tab of your BP.
+    - VR mode supports only Spherical Harmonics Degree 0. We plan to eventually support Degree 1 to 3 as well.
+- Added option to tweak sprite size in BP's details tab.
+    - Increasing sprite size improves rendering quality, but also increases rendering load.
 
+## v1.3 (Oct. 6, 2023)
 - Added experimental support for lighting. Lit/Translucent material is now supported, but problems occurs under certain conditions. [See the details](../how-to-import#known-issues).
     - Lumen is not supported.
         - You can receive the light from Global Illumination, but the brightness may be unstable over time. Also, it cannot emit GI light.
