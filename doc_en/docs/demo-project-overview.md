@@ -1,4 +1,4 @@
-# Demo of example scenes
+# Example scenes
 
 ![](images/demo1280.png){ loading=lazy }  
 

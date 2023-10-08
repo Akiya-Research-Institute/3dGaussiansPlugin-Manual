@@ -1,4 +1,4 @@
-# Demo for VR
+# VR Demo
 
 ![](images/demo1280vr.png){ loading=lazy }  
 
