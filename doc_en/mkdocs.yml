@@ -85,7 +85,8 @@ markdown_extensions:
       alternate_style: true 
   - pymdownx.details
   - footnotes
-
+  - pymdownx.tilde
+  
 nav:
   - Plugin:
     - index.md

@@ -36,8 +36,8 @@ Also, if necessary, set the following items under "Default" in the Details tab.
 	Gaussians inside the range specified here will not be rendered.
 - **Sprite Size**: Adjust the size of the sprite that draws the Gaussian distribution.  
 	Increasing this value allows accurate rendering to the edges of the Gaussian distribution. However, this increases the number of overlapping sprites and increases the drawing load.  
-- **Advanced > VR**: Turn on to support VR.  
-	When turned on, the rendering load will increase slightly.
+- ~~**Advanced > VR**: Turn on to support VR. When turned on, the rendering load will increase slightly.~~  
+	(UPDATE v1.5: This setting is no longer needed. It jsut works for both VR and non-VR)
 - **Advanced > Lit**: Turn on to support lighting.  
 	When turned on, Lit/Translucent material is used. When turned off, Unlit/Translucent material is used.
 
@@ -45,11 +45,14 @@ Also, if necessary, set the following items under "Default" in the Details tab.
 	"Crop Volume", which was used in v1.2 and earlier, has been deprecated. It may be removed in the future.  
 	Please disable "Crop" under DEPRECATED and use the new "Crop Volumes".
 
-!!! Warning "VR mode supports only Spherical Harmonics Degree 0"
-	Currently, even if you select Degree 1 to 3, it will be rendered as Degree 0 when you turn on VR.
-	We plan to eventually support Degree 1 to 3 as well.
+!!! Warning "~~VR mode supports only Spherical Harmonics Degree 0~~"
+	~~Currently, even if you select Degree 1 to 3, it will be rendered as Degree 0 when you turn on VR. We plan to eventually support Degree 1 to 3 as well.~~  
+	(UPDATE v1.5: Now Degree 1 to 3 are supported)
 
 ### Known issues
+
+!!! Failure "Known issues with VR"
+	In UE5.1, if the HMD Roll is not 0 (head tilted to the left or right), rendering will not be correct. Please use UE5.2 or higher.
 
 !!! Failure "Known issue with Lit mode"
 	1. If the point light is close to the surface of the 3D Gaussian Splatting data, the brightness may be uneven.  

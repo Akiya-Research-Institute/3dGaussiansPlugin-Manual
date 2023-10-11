@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.5 (Oct. 9, 2023)
+- VR
+    - Fixed a bug that caused incorrect rendering when VR HMD roll is not zero (UE5.2 and above).
+        - In UE5.1, rendering will not be correct when you tilt head to the left or right. Please use UE5.2 or above.
+    - Removed the option for VR ("Advanced > VR" in BP). This setting is no longer required. It just works for both VR and non-VR.
+    - Added support for Spherical Harmonics Degrees 1-3 in VR.
+    - Improved performance in VR.
+- UEFN
+    - Fixed a bug that prevented the use in UEFN. Please migrate "NS_3D_Gaussians_sh0_UEFN" to UEFN.
+
 ## v1.4 (Oct. 7, 2023)
 - Added experimental support for VR.
     - Turn on "Advanced > VR" in details tab of your BP.
