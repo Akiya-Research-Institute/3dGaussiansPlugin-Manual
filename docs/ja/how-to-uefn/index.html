@@ -623,7 +623,7 @@
 <h2 id="ue">UEプロジェクトでの操作</h2>
 <p><img alt="" loading="lazy" src="../images/how-to-uefn-migrate.png" />  </p>
 <ol>
-<li>コンテンツブラウザで「Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NS_3D_Gaussians_sh0」を右クリックします。</li>
+<li>コンテンツブラウザで「Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NS_3D_Gaussians_sh0_UEFN」を右クリックします。</li>
 <li>「Asset Actions &gt; Migrate...」を選択し、表示されたダイアログで「ThreeDGaussians」にチェックを付けて、OKをクリックします。</li>
 <li>移行先のUEFNプロジェクトのコンテンツフォルダを選択し、移行します。</li>
 <li>「<a href="../how-to-import/#_2">インポート</a>」の通りにモデルをインポートし、「Content &gt; ThreeDGaussians &gt; モデル名 &gt; ブロック番号」の下の「position」「rotation」「scaleAndOpacity」「sh_0」についても、移行先のUEFNプロジェクトに移行します。</li>
@@ -631,14 +631,14 @@
 <h2 id="uefn_1">UEFNプロジェクトでの操作</h2>
 <p><img alt="" loading="lazy" src="../images/how-to-uefn-setup.png" />  </p>
 <ol>
-<li>コンテンツブラウザで「Content &gt; Niagara &gt; NS_3D_Gaussians_sh0」を開きます。</li>
+<li>コンテンツブラウザで「Content &gt; Niagara &gt; NS_3D_Gaussians_sh0_UEFN」を開きます。</li>
 <li>ユーザパラメータタブで「texutre_position」「texutre_rotation」「texutre_scaleAndOpacity」「texutre_sh_0」に、「Content &gt; ThreeDGaussians &gt; モデル名 &gt; ブロック番号」の下の「position」「rotation」「scaleAndOpacity」「sh_0」を指定します。また、「texutre_width」に「position」のテクスチャの横幅を指定します。</li>
 <li>
-<p>「NS_3D_Gaussians_sh0」システムのプロパティを選択し、「Fix issues」をクリックします。</p>
+<p>「NS_3D_Gaussians_sh0_UEFN」システムのプロパティを選択し、「Fix issues」をクリックします。</p>
 <p><img alt="" loading="lazy" src="../images/how-to-uefn-place.png" />  </p>
 </li>
 <li>
-<p>コンテンツブラウザから「Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NS_3D_Gaussians_sh0」をレベル上にドラッグアンドドロップします。</p>
+<p>コンテンツブラウザから「Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NS_3D_Gaussians_sh0_UEFN」をレベル上にドラッグアンドドロップします。</p>
 </li>
 <li>Scalability設定で、Effectsを「Epic」に設定します。</li>
 </ol>
@@ -646,8 +646,7 @@
 <p class="admonition-title">UEFNでのトリミング</p>
 <p>UEFN上でトリミング範囲（位置、回転、大きさ）を指定することができます。<br />
 ただし、これらの適切な値をUEFN上で設定するのはとても難しいです。<br />
-UE上でこれらの適切な値を見つけて、UEFNにコピーペーストすることをお勧めします。<br />
-なお、回転はクォータニオンで表されることに注意してください。</p>
+UE上でこれらの適切な値を見つけて、UEFNにコピーペーストすることをお勧めします。  </p>
 </div>
 
 

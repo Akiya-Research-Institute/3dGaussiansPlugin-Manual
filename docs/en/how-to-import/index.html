@@ -663,8 +663,8 @@ The path must contain only alphanumeric characters.</p>
     Gaussians inside the range specified here will not be rendered.</li>
 <li><strong>Sprite Size</strong>: Adjust the size of the sprite that draws the Gaussian distribution.<br />
     Increasing this value allows accurate rendering to the edges of the Gaussian distribution. However, this increases the number of overlapping sprites and increases the drawing load.  </li>
-<li><strong>Advanced &gt; VR</strong>: Turn on to support VR.<br />
-    When turned on, the rendering load will increase slightly.</li>
+<li><del><strong>Advanced &gt; VR</strong>: Turn on to support VR. When turned on, the rendering load will increase slightly.</del><br />
+    (UPDATE v1.5: This setting is no longer needed. It jsut works for both VR and non-VR)</li>
 <li><strong>Advanced &gt; Lit</strong>: Turn on to support lighting.<br />
     When turned on, Lit/Translucent material is used. When turned off, Unlit/Translucent material is used.</li>
 </ul>
@@ -674,11 +674,15 @@ The path must contain only alphanumeric characters.</p>
 Please disable "Crop" under DEPRECATED and use the new "Crop Volumes".</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">VR mode supports only Spherical Harmonics Degree 0</p>
-<p>Currently, even if you select Degree 1 to 3, it will be rendered as Degree 0 when you turn on VR.
-We plan to eventually support Degree 1 to 3 as well.</p>
+<p class="admonition-title"><del>VR mode supports only Spherical Harmonics Degree 0</del></p>
+<p><del>Currently, even if you select Degree 1 to 3, it will be rendered as Degree 0 when you turn on VR. We plan to eventually support Degree 1 to 3 as well.</del><br />
+(UPDATE v1.5: Now Degree 1 to 3 are supported)</p>
 </div>
 <h3 id="known-issues">Known issues</h3>
+<div class="admonition failure">
+<p class="admonition-title">Known issues with VR</p>
+<p>In UE5.1, if the HMD Roll is not 0 (head tilted to the left or right), rendering will not be correct. Please use UE5.2 or higher.</p>
+</div>
 <div class="admonition failure">
 <p class="admonition-title">Known issue with Lit mode</p>
 <ol>

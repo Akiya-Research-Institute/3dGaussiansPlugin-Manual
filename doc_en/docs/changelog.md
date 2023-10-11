@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.5 (Oct. 9, 2023)
+## v1.5 (Oct. 11, 2023)
 - VR
     - Fixed a bug that caused incorrect rendering when VR HMD roll is not zero (UE5.2 and above).
         - In UE5.1, rendering will not be correct when you tilt head to the left or right. Please use UE5.2 or above.

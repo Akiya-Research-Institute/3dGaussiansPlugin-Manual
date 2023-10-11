@@ -661,7 +661,8 @@
 <li><strong>Kill Volumes</strong>に要素を追加し、非表示の範囲を指定します。ここで指定した範囲の中は描画されなくなります。  </li>
 <li><strong>Sprite Size</strong>でガウス分布を描画するスプライトのサイズを調整します。<br />
     この値を大きくするとガウス分布の端まで正しく描画されるようになり描画精度が向上します。ただし、それだけスプライトの重なりが多くなり描画負荷が増大します。  </li>
-<li><strong>Advanced &gt; VR</strong>で、VR対応をオンにするかを設定します。VR対応にすると描画負荷が少し増加します。  </li>
+<li><del><strong>Advanced &gt; VR</strong> で、VR対応をオンにするかを設定します。VR対応にすると描画負荷が少し増加します。</del><br />
+    (UPDATE: v1.5で設定不要になりました。VR・非VRを問わずそのまま機能します)</li>
 <li><strong>Advanced &gt; Lit</strong>で、光を受けるかを設定します。<br />
     オンにするとLit・Translucentなマテリアルとして、オフにするとUnlit・Translucentなマテリアルとして描画されます。  </li>
 </ul>
@@ -671,11 +672,15 @@
 DEPRECATEDの下の"Crop"を無効にし、新しいCrop Volumesをご使用ください。</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">現在、VRはSpherical Harmonics Degree 0のみに対応</p>
-<p>現状、Degree1～3を選択しても、VRをオンにするとDegree 0として描画されます。<br />
-Degree1～3には順次対応予定です。</p>
+<p class="admonition-title"><del>現在、VRはSpherical Harmonics Degree 0のみに対応</del></p>
+<p><del>現状、Degree1～3を選択しても、VRをオンにするとDegree 0として描画されます。Degree1～3には順次対応予定です。</del><br />
+(v1.5でDegree1～3に対応しました)</p>
 </div>
 <h3 id="_4">既知の問題</h3>
+<div class="admonition failure">
+<p class="admonition-title">VRでの既知の問題</p>
+<p>UE5.1では、HMDのRollが0以外（首を左右に傾けた状態）では正常に描画されません。UE5.2以上を使用してください。</p>
+</div>
 <div class="admonition failure">
 <p class="admonition-title">Lit表示の既知の問題</p>
 <ol>

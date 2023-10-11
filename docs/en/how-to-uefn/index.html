@@ -623,7 +623,7 @@
 <h2 id="operation-in-the-ue-project">Operation in the UE project</h2>
 <p><img alt="" loading="lazy" src="../images/how-to-uefn-migrate.png" />  </p>
 <ol>
-<li>Right-click "Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NS_3D_Gaussians_sh0" in the content browser.</li>
+<li>Right-click "Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NS_3D_Gaussians_sh0_UEFN" in the content browser.</li>
 <li>Select "Asset Actions &gt; Migrate...", check "ThreeDGaussians" in the dialog box, and click OK. </li>
 <li>Select the contents folder of the destination UEFN project to migrate.</li>
 <li>Import a model to a UE project as described in "<a href="../how-to-import/#import">Import</a>" section, and migrate "position", "rotation", "scaleAndOpacity" and "sh_0" in "Content &gt; ThreeDGaussians &gt; Model Name &gt; Block Number" to the destination UEFN project.</li>
@@ -631,14 +631,14 @@
 <h2 id="operation-in-the-uefn-project">Operation in the UEFN project</h2>
 <p><img alt="" loading="lazy" src="../images/how-to-uefn-setup.png" />  </p>
 <ol>
-<li>Open "Content &gt; Niagara &gt; NS_3D_Gaussians_sh0" in the content browser</li>
+<li>Open "Content &gt; Niagara &gt; NS_3D_Gaussians_sh0_UEFN" in the content browser</li>
 <li>In the User Parameters tab, set "position", "rotation", "scaleAndOpacity" and "sh_0" in "Content &gt; ThreeDGaussians &gt; Model Name &gt; Block Number" to "texutre_position", "texutre_rotation", "texutre_scaleAndOpacity" and "texutre_sh_0. Also, set the width of the texture to "texutre_width".</li>
 <li>
-<p>Select the "NS_3D_Gaussians_sh0" system's properties and click "Fix issues".</p>
+<p>Select the "NS_3D_Gaussians_sh0_UEFN" system's properties and click "Fix issues".</p>
 <p><img alt="" loading="lazy" src="../images/how-to-uefn-place.png" />  </p>
 </li>
 <li>
-<p>Drag and drop "Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NS_3D_Gaussians_sh0" from the content browser onto the level.</p>
+<p>Drag and drop "Engine &gt; Plugins &gt; 3D Gaussians Content &gt; Niagara &gt; NS_3D_Gaussians_sh0_UEFN" from the content browser onto the level.</p>
 </li>
 <li>In the Scalability settings, set "Epic" for Effects.</li>
 </ol>
@@ -646,8 +646,7 @@
 <p class="admonition-title">How to crop in UEFN</p>
 <p>You can specify crop translation, rotation, and extent in UEFN.<br />
 The problem is it is really difficult to find proper values for these variables in UEFN.<br />
-It is recommended to find these vaules in UE and copy-paste them into UEFN.<br />
-Note that rotaion is in Quaternion.</p>
+It is recommended to find these vaules in UE and copy-paste them into UEFN.  </p>
 </div>
 
 

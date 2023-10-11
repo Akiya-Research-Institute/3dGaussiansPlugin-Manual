@@ -504,8 +504,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v13-2023107" class="md-nav__link">
-    v1.3 (2023/10/7)
+  <a href="#v15-20231011" class="md-nav__link">
+    v1.5 (2023/10/11)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v14-2023107" class="md-nav__link">
+    v1.4 (2023/10/7)
   </a>
   
 </li>
@@ -633,7 +640,24 @@
 
 
 <h1 id="_1">更新履歴</h1>
-<h2 id="v13-2023107">v1.3 (2023/10/7)</h2>
+<h2 id="v15-20231011">v1.5 (2023/10/11)</h2>
+<ul>
+<li>VR<ul>
+<li>VRでHMDのRollが0以外だと正しく描画できないバグを修正しました（UE5.2以上のみ）。<ul>
+<li>UE5.1では正しく描画できません。VRを使用する場合はUE5.2以上をご使用ください。</li>
+</ul>
+</li>
+<li>VR向けのオプション（BPの「Advanced &gt; VR」）の指定が不要になりました。VR・非VRを問わずそのまま機能します。</li>
+<li>VRでSpherical Harmonics Degree 1～3に対応しました。</li>
+<li>VRでのパフォーマンスが向上しました。</li>
+</ul>
+</li>
+<li>UEFN<ul>
+<li>v1.3以降でUEFNで使用できなくなっていた問題を修正しました。「NS_3D_Gaussians_sh0_UEFN」をUEFNに移行してください。</li>
+</ul>
+</li>
+</ul>
+<h2 id="v14-2023107">v1.4 (2023/10/7)</h2>
 <ul>
 <li>VRに実験的に対応しました。<ul>
 <li>BPの詳細タブで「Advanced &gt; VR」をオンにしてください。</li>
