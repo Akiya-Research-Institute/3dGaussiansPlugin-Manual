@@ -421,6 +421,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to-niagara/" class="md-nav__link">
+        Customize rendering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to-uefn/" class="md-nav__link">
         Migration to UEFN (Experimental)
       </a>
@@ -490,8 +504,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-can-i-make-packages-for-platforms-other-than-windows" class="md-nav__link">
-    How can I make packages for platforms other than Windows?
+  <a href="#how-can-i-make-packages-for-other-platforms" class="md-nav__link">
+    How can I make packages for other platforms?
   </a>
   
 </li>
@@ -668,9 +682,9 @@
 
 
 <h1 id="faq">FAQ</h1>
-<h2 id="how-can-i-make-packages-for-platforms-other-than-windows">How can I make packages for platforms other than Windows?</h2>
-<p>The development team has only tested on Windows, so we cannot guarantee that it will work, but the rendering process is implemented in the standard Niagara and Material nodes, so there is a good chance that it will work on non-Windows platforms.  </p>
-<p>To create the package for non-Windows platforms, you need to add the platforms to line 22 of "C:\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\ThreeDGaussians\ThreeDGaussians.uplugin".</p>
+<h2 id="how-can-i-make-packages-for-other-platforms">How can I make packages for other platforms?</h2>
+<p>We cannot guarantee that it will work, but the rendering process is implemented in the standard Niagara and Material nodes, so there is a good chance that it will work on non-Windows platforms.  </p>
+<p>To create the package for platforms other than Windows, Linux, and Android, you need to add the platforms to line 22 and line 32 of "C:\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\ThreeDGaussians\ThreeDGaussians.uplugin".</p>
 <h2 id="how-do-i-reduce-the-package-size">How do I reduce the package size?</h2>
 <ul>
 <li>Set the Spherical Harmonics Degree to "Degree 0".</li>

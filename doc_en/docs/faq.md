@@ -1,10 +1,10 @@
 # FAQ
 
-## How can I make packages for platforms other than Windows?
+## How can I make packages for other platforms?
 
-The development team has only tested on Windows, so we cannot guarantee that it will work, but the rendering process is implemented in the standard Niagara and Material nodes, so there is a good chance that it will work on non-Windows platforms.  
+We cannot guarantee that it will work, but the rendering process is implemented in the standard Niagara and Material nodes, so there is a good chance that it will work on non-Windows platforms.  
 
-To create the package for non-Windows platforms, you need to add the platforms to line 22 of "C:\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\ThreeDGaussians\ThreeDGaussians.uplugin".
+To create the package for platforms other than Windows, Linux, and Android, you need to add the platforms to line 22 and line 32 of "C:\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\ThreeDGaussians\ThreeDGaussians.uplugin".
 
 ## How do I reduce the package size?
 

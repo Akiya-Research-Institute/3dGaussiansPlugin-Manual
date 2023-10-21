@@ -421,6 +421,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to-niagara/" class="md-nav__link">
+        描画処理のカスタム
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to-uefn/" class="md-nav__link">
         UEFNへの移行(実験的)
       </a>
@@ -502,6 +516,13 @@
       目次
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v16-20231021" class="md-nav__link">
+    v1.6 (2023/10/21)
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v15-20231011" class="md-nav__link">
@@ -640,6 +661,22 @@
 
 
 <h1 id="_1">更新履歴</h1>
+<h2 id="v16-20231021">v1.6 (2023/10/21)</h2>
+<ul>
+<li>プラットフォーム<ul>
+<li>Development PlatformとしてUbuntu 22.04 Desktop x64に実験的に対応しました。</li>
+<li>Target Build PlatformとしてLinux x64とAndroidに実験的に対応しました。</li>
+</ul>
+</li>
+<li>Niagara EmitterでLocal Spaceをオンにしたときに正しく機能するようになりました。<ul>
+<li>Sequencer等で3D Gaussians Splattingのアクタを動かすには、Local Spaceをオンにしてください。<a href="../how-to-niagara">詳細はこちら</a>。</li>
+</ul>
+</li>
+<li>使用するNiagara Systemを指定できるようになりました。BPの詳細タブで「Advanced &gt; Niagara Override」に指定します。<ul>
+<li>Wind Force等を使ったサンプルを追加しました。<a href="../how-to-niagara/#niagara">詳細はこちら</a>。</li>
+</ul>
+</li>
+</ul>
 <h2 id="v15-20231011">v1.5 (2023/10/11)</h2>
 <ul>
 <li>VR<ul>

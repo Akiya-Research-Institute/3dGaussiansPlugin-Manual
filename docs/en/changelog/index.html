@@ -421,6 +421,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to-niagara/" class="md-nav__link">
+        Customize rendering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to-uefn/" class="md-nav__link">
         Migration to UEFN (Experimental)
       </a>
@@ -502,6 +516,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v16-oct-21-2023" class="md-nav__link">
+    v1.6 (Oct. 21, 2023)
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v15-oct-11-2023" class="md-nav__link">
@@ -640,6 +661,22 @@
 
 
 <h1 id="changelog">Changelog</h1>
+<h2 id="v16-oct-21-2023">v1.6 (Oct. 21, 2023)</h2>
+<ul>
+<li>Platforms<ul>
+<li>Added experimental support for Ubuntu 22.04 Desktop x64 as a development platform</li>
+<li>Added experimental support for Linux x64 and Android as target build platforms</li>
+</ul>
+</li>
+<li>Niagara Emitter now functions correctly when "Local Space" is turned on.<ul>
+<li>If you want to move 3D Gaussians Splatting actors at runtime using Sequencer etc., please turn on "Local Space". <a href="../how-to-niagara">See details</a>.</li>
+</ul>
+</li>
+<li>Now you can specify the Niagara System to be used. In the details tab of the BP, specify "Advanced &gt; Niagara Override".<ul>
+<li>Added examples using Wind Force and Curl Noise. <a href="../how-to-niagara/#use-your-own-niagara">See details</a>。</li>
+</ul>
+</li>
+</ul>
 <h2 id="v15-oct-11-2023">v1.5 (Oct. 11, 2023)</h2>
 <ul>
 <li>VR<ul>

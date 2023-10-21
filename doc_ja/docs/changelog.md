@@ -1,5 +1,14 @@
 # 更新履歴
 
+## v1.6 (2023/10/21)
+- プラットフォーム
+    - Development PlatformとしてUbuntu 22.04 Desktop x64に実験的に対応しました。
+    - Target Build PlatformとしてLinux x64とAndroidに実験的に対応しました。
+- Niagara EmitterでLocal Spaceをオンにしたときに正しく機能するようになりました。
+    - Sequencer等で3D Gaussians Splattingのアクタを動かすには、Local Spaceをオンにしてください。[詳細はこちら](../how-to-niagara)。
+- 使用するNiagara Systemを指定できるようになりました。BPの詳細タブで「Advanced > Niagara Override」に指定します。
+    - Wind Force等を使ったサンプルを追加しました。[詳細はこちら](../how-to-niagara/#niagara)。
+
 ## v1.5 (2023/10/11)
 - VR
     - VRでHMDのRollが0以外だと正しく描画できないバグを修正しました（UE5.2以上のみ）。

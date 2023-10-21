@@ -11,9 +11,6 @@
 	You cannot import from a path that contains multibyte characters such as Japanese.  
 	The path must contain only alphanumeric characters.
 
-!!! Failure "Folder structure rule"
-	Folder structure must be "*ModelName* > point_cloud > iteration_*nnnnn*"
-
 ## Place to level
 
 ![](images/how-to-place.png){ loading=lazy }  

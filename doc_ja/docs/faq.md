@@ -1,10 +1,10 @@
 # FAQ
 
-## Windows以外でも動したいです
+## Windows, Linux, Android以外でも動したいです
 
-開発チームではWindowsでのみテストを行っているので動くかどうかは保証できませんが、描画処理はNiagaraとMaterialの標準ノードで実装されているので、Windows以外でも動く可能性が高いです。
+テストしていないので動くかどうかは保証できませんが、描画処理はNiagaraとMaterialの標準ノードで実装されているので、その他のプラットフォームでも動く可能性が高いです。
 
-パッケージを作成するには、「C:\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\ThreeDGaussians\ThreeDGaussians.uplugin」の22行目に目的のプラットフォームを追加する必要があります。
+パッケージを作成するには、「C:\Program Files\Epic Games\UE_5.3\Engine\Plugins\Marketplace\ThreeDGaussians\ThreeDGaussians.uplugin」の22行目と32行目に目的のプラットフォームを追加する必要があります。
 
 ## パッケージサイズを減らすにはどうすればいいですか？
 

@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.6 (Oct. 21, 2023)
+- Platforms
+    - Added experimental support for Ubuntu 22.04 Desktop x64 as a development platform
+    - Added experimental support for Linux x64 and Android as target build platforms
+- Niagara Emitter now functions correctly when "Local Space" is turned on.
+    - If you want to move 3D Gaussians Splatting actors at runtime using Sequencer etc., please turn on "Local Space". [See details](../how-to-niagara).
+- Now you can specify the Niagara System to be used. In the details tab of the BP, specify "Advanced > Niagara Override".
+    - Added examples using Wind Force and Curl Noise. [See details](../how-to-niagara/#use-your-own-niagara)。
+
 ## v1.5 (Oct. 11, 2023)
 - VR
     - Fixed a bug that caused incorrect rendering when VR HMD roll is not zero (UE5.2 and above).
