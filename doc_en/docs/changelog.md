@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.7 (Oct. 26, 2023)
+- Added a function to merge multiple models and export them to a single .ply file, with cropping etc. applied. [See details](../how-to-export).
+
 ## v1.6 (Oct. 21, 2023)
 - Platforms
     - Added experimental support for Ubuntu 22.04 Desktop x64 as a development platform
