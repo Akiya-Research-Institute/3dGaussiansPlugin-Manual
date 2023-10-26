@@ -16,7 +16,7 @@ This is useful for
 2. Press the button below to execute the export of the .ply file
 
 	- **Export All**: Exports all 3D Gaussians actors on the level into one merged .ply file
-	- **Export This**: Exports selected 3D Gaussians actors to a .ply file
+	- **Export This**: Exports this 3D Gaussians actor to a .ply file
 
 	In both of the above cases, the export will be executed with the following applied:
 
