@@ -16,10 +16,6 @@ The maximum value of the texture's sides can be set by specifying the console va
 The square of this value is the maximum number of particles each block can hold.  
 The default value is 1024.
 
-This method can be re-enabled by specifying the following in the console variable:  
-
-- `ThreeDGaussians.DoSplitBy3dMortonOrder 1`
-
 !!! Question "The max number of particles in Niagara"
     The maximum number of particles Niagara can handle is 2,000,000. (as of UE5.1).  
     However, although the detailed conditions are unknown, sometimes a warning message appears with a smaller value (e.g., 1,597,823 particles).  
