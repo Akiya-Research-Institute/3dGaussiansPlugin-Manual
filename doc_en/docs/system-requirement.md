@@ -16,6 +16,9 @@
 | iOS                        |                  |              |
 | Mac                        |                  |              |
 
+!!! Warning "Windows is required to download the plugin"
+    You need to download the plugin by using the Epic Games Launcher on **Windows**.  
+
 !!! Question "Tested Ubuntu environment"
     The developer tested only in the following environment:
 

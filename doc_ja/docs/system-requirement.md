@@ -16,6 +16,9 @@
 | iOS                        |                  |              |
 | Mac                        |                  |              |
 
+!!! Warning "プラグインのダウンロードにWindowsが必要です"
+    **Windows**のEpic Games Launcherを使用してプラグインをダウンロードする必要があります。
+
 !!! Question "テスト済みUbuntu環境"
     下記の環境でのみテスト済みです。
 
