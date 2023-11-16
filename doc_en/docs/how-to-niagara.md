@@ -27,3 +27,9 @@ By specifying "Engine > Plugins > 3D Gaussians Content > Example > NS_3D_Gaussia
 ![](images/how-to-niagara-curl.gif){ loading=lazy }  
 
 By specifying "Engine > Plugins > 3D Gaussians Content > Example > NS_3D_Gaussians_sh0_RotateByCurlNoise" to "Niagara Override", you can get the effect above.
+
+### Example: Scale by Curl Noise
+
+![](images/how-to-niagara-scale.gif){ loading=lazy }  
+
+By specifying "Engine > Plugins > 3D Gaussians Content > Example > NS_3D_Gaussians_sh0_ScaleByCurlNoise" to "Niagara Override", you can get the effect above.

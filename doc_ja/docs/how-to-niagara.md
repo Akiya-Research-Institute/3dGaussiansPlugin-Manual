@@ -23,3 +23,9 @@ Sequencer等で3D Gaussians Splattingのアクタを実行時に動かす場合�
 ![](images/how-to-niagara-curl.gif){ loading=lazy }  
 
 「Engine > Plugins > 3D Gaussians Content > Example > NS_3D_Gaussians_sh0_RotateByCurlNoise」を「Niagara Override」に指定すると、風でパーティクルが揺れているような効果が得られます。
+
+### 例:Curl Noiseによる拡縮
+
+![](images/how-to-niagara-scale.gif){ loading=lazy }  
+
+「Engine > Plugins > 3D Gaussians Content > Example > NS_3D_Gaussians_sh0_ScaleByCurlNoise」を「Niagara Override」に指定すると、風でパーティクルが揺れているような効果が得られます。

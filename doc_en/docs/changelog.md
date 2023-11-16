@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.8 (Nov. 16, 2023)
+- Added an option to control the size of the gaussians in the Niagara System. [See details](../how-to-niagara/#use-your-own-niagara).
+- .ply files output by Super Splat v0.10.3 are now supported.
+
 ## v1.7 (Oct. 26, 2023)
 - Added a function to merge multiple models and export them to a single .ply file, with cropping etc. applied. [See details](../how-to-export).
 
