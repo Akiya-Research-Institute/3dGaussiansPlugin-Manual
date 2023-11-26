@@ -36,6 +36,12 @@ GPUのメモリが不足している可能性が高いです。下記をお試�
 描画精度を上げる一つの方法は、BPのDetailsパネルで「Sprite Size」を大きくすることです。  
 これにより、ガウス分布を描画するときのスプライトのサイズが大きくなり、ガウス分布の端まで正しく描画されるようになります。
 
+## SceneCapture2Dで正しく描画されません
+
+BPの詳細タブの「Default > Advanced > Render As 2D Gaussians」をオンにしてください。
+
+3D Gaussianの本来の描画方法ではカメラとの相対的な位置関係等からスプライトのサイズと向きを計算します。このプラグインではその計算をNiagaraで行いますが、NiagaraはSceneCapture2Dのカメラ位置等を取得してくれません。「Render As 2D Gaussians」をオンにすると、カメラ位置等が必要なNiagaraでの計算を省略した近似的な描画方式に切り替わります。厳密には描画結果が不正確ですが、ほとんど気が付かれないレベルと思います。
+
 ## [3D Gaussian Splattingの公式実装](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/)は商用利用不可ですが、このプラグインはどのような扱いですか？
 
 - このプラグインは公式実装のソースコードは一切用いず、NiagaraとMaterialのノードベースプログラミングで一から実装されています（プラグインはCUDAやHLSLのソースコードを含んですらいません）。

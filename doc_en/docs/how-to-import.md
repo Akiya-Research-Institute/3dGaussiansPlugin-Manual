@@ -37,6 +37,10 @@ Also, if necessary, set the following items under "Default" in the Details tab.
 	(UPDATE v1.5: This setting is no longer needed. It jsut works for both VR and non-VR)
 - **Advanced > Lit**: Turn on to support lighting.  
 	When turned on, Lit/Translucent material is used. When turned off, Unlit/Translucent material is used.
+- **Advanced > Render As 2D Gaussians**: Turn on to switch to an approximate rendering method compatible with SceneCapture2D and others.  
+	The result is not accurate, but it is more compatible with the engine's rendering pipeline and works in many cases, including SceneCapture2D.
+- **Advanced > Alpha Boost For 2D Gaussians**: Adjust the opacity of the gaussinas in the "2D Gaussians" rendering method described above.
+	The opacity in the "2D Gaussians" rendering method tends to be thin, so tweak this for your liking.
 
 !!! Warning "Migrate cropping range from v1.2 or earlier"
 	"Crop Volume", which was used in v1.2 and earlier, has been deprecated. It may be removed in the future.  

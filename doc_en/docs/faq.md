@@ -36,6 +36,12 @@ Since our implementation is fundamentally different from the official implementa
 One way to increase the rendering accuracy is to increase "Sprite Size" in Details tab of the BP.  
 This will increase the size of the sprite on which gaussians are rendered and ensure that the edges of the gaussians are rendered correctly.
 
+## Rendering result is incorrect in SceneCapture2D
+
+Turn on "Default > Advanced > Render As 2D Gaussians" in the details tab of the BP.
+
+The original rendering method of 3D Gaussian Splatting requires the calculation of the sprite size and orientation based on the relative position of each gaussian to the camera. This plugin uses Niagara to perform this calculation, but Niagara does not evaluate the SceneCapture2D's camera position, etc. Turning on "Render As 2D Gaussians" switches to an approximate rendering method that does not require the calculation which usess the camera information. Strictly speaking, the rendering result is inaccurate, but it is hardly noticeable.
+
 ## [Official Implementation of 3D Gaussian Splatting](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) is not available for commercial use, how about this plugin?
 
 - This plugin is implemented from scratch using Niagara and Material's node-based programming without any source code from the official implementation. (It does not even contain CUDA or HLSL source code).

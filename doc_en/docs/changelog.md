@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.9 (Nov. 27, 2023)
+- Added a new rendering method compatible with SceneCapture2D and others.  
+	The result is not strictly accurate, but it is more compatible with the engine's rendering pipeline and works in many cases, including SceneCapture2D.
+
 ## v1.8 (Nov. 16, 2023)
 - Added an option to control the size of the gaussians in the Niagara System. [See details](../how-to-niagara/#use-your-own-niagara).
 - .ply files output by Super Splat v0.10.3 are now supported.
