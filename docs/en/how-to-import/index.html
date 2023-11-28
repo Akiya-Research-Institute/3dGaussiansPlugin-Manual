@@ -691,6 +691,10 @@ The path must contain only alphanumeric characters.</p>
     (UPDATE v1.5: This setting is no longer needed. It jsut works for both VR and non-VR)</li>
 <li><strong>Advanced &gt; Lit</strong>: Turn on to support lighting.<br />
     When turned on, Lit/Translucent material is used. When turned off, Unlit/Translucent material is used.</li>
+<li><strong>Advanced &gt; Render As 2D Gaussians</strong>: Turn on to switch to an approximate rendering method compatible with SceneCapture2D and others.<br />
+    The result is not accurate, but it is more compatible with the engine's rendering pipeline and works in many cases, including SceneCapture2D.</li>
+<li><strong>Advanced &gt; Alpha Boost For 2D Gaussians</strong>: Adjust the opacity of the gaussinas in the "2D Gaussians" rendering method described above.
+    The opacity in the "2D Gaussians" rendering method tends to be thin, so tweak this for your liking.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Migrate cropping range from v1.2 or earlier</p>

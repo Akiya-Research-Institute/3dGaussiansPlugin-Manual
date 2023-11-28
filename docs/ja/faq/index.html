@@ -560,6 +560,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#scenecapture2d" class="md-nav__link">
+    SceneCapture2Dで正しく描画されません
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3d-gaussian-splatting" class="md-nav__link">
     3D Gaussian Splattingの公式実装は商用利用不可ですが、このプラグインはどのような扱いですか？
   </a>
@@ -725,6 +732,9 @@
 <p>公式実装のビューアとは実装が根本的に異なるので、描画結果は必ずしも一致しません。</p>
 <p>描画精度を上げる一つの方法は、BPのDetailsパネルで「Sprite Size」を大きくすることです。<br />
 これにより、ガウス分布を描画するときのスプライトのサイズが大きくなり、ガウス分布の端まで正しく描画されるようになります。</p>
+<h2 id="scenecapture2d">SceneCapture2Dで正しく描画されません</h2>
+<p>BPの詳細タブの「Default &gt; Advanced &gt; Render As 2D Gaussians」をオンにしてください。</p>
+<p>3D Gaussianの本来の描画方法ではカメラとの相対的な位置関係等からスプライトのサイズと向きを計算します。このプラグインではその計算をNiagaraで行いますが、NiagaraはSceneCapture2Dのカメラ位置等を取得してくれません。「Render As 2D Gaussians」をオンにすると、カメラ位置等が必要なNiagaraでの計算を省略した近似的な描画方式に切り替わります。厳密には描画結果が不正確ですが、ほとんど気が付かれないレベルと思います。</p>
 <h2 id="3d-gaussian-splatting"><a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splattingの公式実装</a>は商用利用不可ですが、このプラグインはどのような扱いですか？</h2>
 <ul>
 <li>このプラグインは公式実装のソースコードは一切用いず、NiagaraとMaterialのノードベースプログラミングで一から実装されています（プラグインはCUDAやHLSLのソースコードを含んですらいません）。

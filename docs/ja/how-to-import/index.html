@@ -689,6 +689,10 @@
     (UPDATE: v1.5で設定不要になりました。VR・非VRを問わずそのまま機能します)</li>
 <li><strong>Advanced &gt; Lit</strong>で、光を受けるかを設定します。<br />
     オンにするとLit・Translucentなマテリアルとして、オフにするとUnlit・Translucentなマテリアルとして描画されます。  </li>
+<li><strong>Advanced &gt; Render As 2D Gaussians</strong>をオンにすると、SceneCapture2D等に対応した近似的な描画方式に切り替わります。<br />
+    描画結果は厳密には不正確ですが、エンジンの描画パイプラインとの互換性が高くなり、SceneCapture2Dを含む多くの場合で機能します。</li>
+<li><strong>Advanced &gt; Alpha Boost For 2D Gaussians</strong>で、上記の「2D Gaussians」描画方式におけるガウシアンの透明度を調整します。<br />
+    「2D Gaussians」描画方式では透明度が薄くなりがちなので、この値を好みに合わせて調整してください。</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">v1.2以前からのトリミング範囲の移行</p>

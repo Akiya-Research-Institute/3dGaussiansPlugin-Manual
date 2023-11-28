@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.9 (Nov. 27, 2023)
+## v1.9 (Nov. 28, 2023)
 - Added a new rendering method compatible with SceneCapture2D and others.  
 	The result is not strictly accurate, but it is more compatible with the engine's rendering pipeline and works in many cases, including SceneCapture2D.
 

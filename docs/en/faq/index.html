@@ -560,6 +560,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rendering-result-is-incorrect-in-scenecapture2d" class="md-nav__link">
+    Rendering result is incorrect in SceneCapture2D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#official-implementation-of-3d-gaussian-splatting-is-not-available-for-commercial-use-how-about-this-plugin" class="md-nav__link">
     Official Implementation of 3D Gaussian Splatting is not available for commercial use, how about this plugin?
   </a>
@@ -725,6 +732,9 @@
 <p>Since our implementation is fundamentally different from the official implementation of the viewer, rendering results do not always match.</p>
 <p>One way to increase the rendering accuracy is to increase "Sprite Size" in Details tab of the BP.<br />
 This will increase the size of the sprite on which gaussians are rendered and ensure that the edges of the gaussians are rendered correctly.</p>
+<h2 id="rendering-result-is-incorrect-in-scenecapture2d">Rendering result is incorrect in SceneCapture2D</h2>
+<p>Turn on "Default &gt; Advanced &gt; Render As 2D Gaussians" in the details tab of the BP.</p>
+<p>The original rendering method of 3D Gaussian Splatting requires the calculation of the sprite size and orientation based on the relative position of each gaussian to the camera. This plugin uses Niagara to perform this calculation, but Niagara does not evaluate the SceneCapture2D's camera position, etc. Turning on "Render As 2D Gaussians" switches to an approximate rendering method that does not require the calculation which usess the camera information. Strictly speaking, the rendering result is inaccurate, but it is hardly noticeable.</p>
 <h2 id="official-implementation-of-3d-gaussian-splatting-is-not-available-for-commercial-use-how-about-this-plugin"><a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">Official Implementation of 3D Gaussian Splatting</a> is not available for commercial use, how about this plugin?</h2>
 <ul>
 <li>This plugin is implemented from scratch using Niagara and Material's node-based programming without any source code from the official implementation. (It does not even contain CUDA or HLSL source code).

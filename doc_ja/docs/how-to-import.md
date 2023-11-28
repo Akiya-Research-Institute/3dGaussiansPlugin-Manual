@@ -37,8 +37,8 @@
 	オンにするとLit・Translucentなマテリアルとして、オフにするとUnlit・Translucentなマテリアルとして描画されます。  
 - **Advanced > Render As 2D Gaussians**をオンにすると、SceneCapture2D等に対応した近似的な描画方式に切り替わります。  
 	描画結果は厳密には不正確ですが、エンジンの描画パイプラインとの互換性が高くなり、SceneCapture2Dを含む多くの場合で機能します。
-- **Advanced > Alpha Boost For 2D Gaussians**で、上記の「2D Gaussians」描画方式におけるガウシアンの不透明度を調整します。  
-	この描画方式での不透明度が薄くなりがちなので、この値を好みに合わせて調整してください。
+- **Advanced > Alpha Boost For 2D Gaussians**で、上記の「2D Gaussians」描画方式におけるガウシアンの透明度を調整します。  
+	「2D Gaussians」描画方式では透明度が薄くなりがちなので、この値を好みに合わせて調整してください。
 
 !!! Warning "v1.2以前からのトリミング範囲の移行"
 	v1.2以前で使用されていたCrop Volumeは非推奨となりました。将来的に削除される可能性があります。  
