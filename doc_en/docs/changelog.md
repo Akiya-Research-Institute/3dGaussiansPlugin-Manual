@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.10 (Apr. 3, 2024)
+- Fixed a problem that prevented importing data exported from Polycam.
+
 ## v1.9 (Nov. 28, 2023)
 - Added a new rendering method compatible with SceneCapture2D and others.  
 	The result is not strictly accurate, but it is more compatible with the engine's rendering pipeline and works in many cases, including SceneCapture2D.
