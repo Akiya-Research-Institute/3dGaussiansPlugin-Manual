@@ -4,7 +4,7 @@
 
 ## ダウンロード
 
-EXE形式のデモプロジェクトを[こちら](https://s3.ap-northeast-1.wasabisys.com/whisperrealtime/3dGaussiansPluginDemo-v1.0.zip)からダウンロードできます。
+EXE形式のデモプロジェクトを[こちら](https://taguchishouji-my.sharepoint.com/:u:/g/personal/kasa_taguchishouji_onmicrosoft_com/ESL5tSLg-cpNomZDj_lMgfsBpT_VaZunWSAZQhp3WsZb2w?e=YhyPwf)からダウンロードできます。
 
 ## システム要件
 
