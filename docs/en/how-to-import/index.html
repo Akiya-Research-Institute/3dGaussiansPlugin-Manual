@@ -706,10 +706,19 @@ Please disable "Crop" under DEPRECATED and use the new "Crop Volumes".</p>
 <p><del>Currently, even if you select Degree 1 to 3, it will be rendered as Degree 0 when you turn on VR. We plan to eventually support Degree 1 to 3 as well.</del><br />
 (UPDATE v1.5: Now Degree 1 to 3 are supported)</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Flickering when viewed from a long distance</p>
+<p>By default, the Gaussian sort order is calculated with 16-bit precision, which can cause flickering when viewed from a long distance, as the sort order cannot be correctly evaluated at a distance.</p>
+<p>In UE 5.2 and above, setting ‘Project Settings &gt; Plugins &gt; Niagara &gt; Renderer &gt; Default Sort Precision’ to ‘High’ solves the problem in many cases.</p>
+</div>
 <h3 id="known-issues">Known issues</h3>
 <div class="admonition failure">
 <p class="admonition-title">Known issues with VR</p>
 <p>In UE5.1, if the HMD Roll is not 0 (head tilted to the left or right), rendering will not be correct. Please use UE5.2 or higher.</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Known issues with portrait aspect ratio</p>
+<p>UE5.1 may not render correctly if the screen aspect ratio is portrait. Use UE5.2 or above.</p>
 </div>
 <div class="admonition failure">
 <p class="admonition-title">Known issue with Lit mode</p>

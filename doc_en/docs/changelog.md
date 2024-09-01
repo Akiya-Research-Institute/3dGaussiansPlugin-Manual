@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.11 (Sep. 1, 2024)
+- Only UE5.2 and above have been updated.
+- Fixed flickering problem on data with a large drawing area.
+    - If the above problem occurs, set "Project Settings > Plugins > Niagara > Renderer > Default Sort Precision" to "High".
+- Fixed rendering problem when screen aspect ratio is portrait.
+
 ## v1.10 (Apr. 3, 2024)
 - Fixed a problem that prevented importing data exported from Polycam.
 

@@ -704,10 +704,19 @@ DEPRECATEDの下の"Crop"を無効にし、新しいCrop Volumesをご使用く�
 <p><del>現状、Degree1～3を選択しても、VRをオンにするとDegree 0として描画されます。Degree1～3には順次対応予定です。</del><br />
 (v1.5でDegree1～3に対応しました)</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">描画範囲の広いデータでチラつきが発生する場合</p>
+<p>デフォルトではガウシアンのソート順を16bitの精度で計算しており、遠方ではソート順を正しく評価できなくなるため、広範囲のデータではチラつきが発生します。</p>
+<p>UE5.2以上で、「Project Settings &gt; Plugins &gt; Niagara &gt; Renderer &gt; Default Sort Precision」を「High」にすると多くの場合は問題が解決します。</p>
+</div>
 <h3 id="_4">既知の問題</h3>
 <div class="admonition failure">
 <p class="admonition-title">VRでの既知の問題</p>
 <p>UE5.1では、HMDのRollが0以外（首を左右に傾けた状態）では正常に描画されません。UE5.2以上を使用してください。</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">縦長画面での問題</p>
+<p>UE5.1では、画面のアスペクト比が縦長だと正常に描画できない場合があります。UE5.2以上を使用してください。</p>
 </div>
 <div class="admonition failure">
 <p class="admonition-title">Lit表示の既知の問題</p>

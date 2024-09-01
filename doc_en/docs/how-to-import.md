@@ -50,10 +50,18 @@ Also, if necessary, set the following items under "Default" in the Details tab.
 	~~Currently, even if you select Degree 1 to 3, it will be rendered as Degree 0 when you turn on VR. We plan to eventually support Degree 1 to 3 as well.~~  
 	(UPDATE v1.5: Now Degree 1 to 3 are supported)
 
+!!! Warning "Flickering when viewed from a long distance"
+	By default, the Gaussian sort order is calculated with 16-bit precision, which can cause flickering when viewed from a long distance, as the sort order cannot be correctly evaluated at a distance.
+
+	In UE 5.2 and above, setting ‘Project Settings > Plugins > Niagara > Renderer > Default Sort Precision’ to ‘High’ solves the problem in many cases.
+
 ### Known issues
 
 !!! Failure "Known issues with VR"
 	In UE5.1, if the HMD Roll is not 0 (head tilted to the left or right), rendering will not be correct. Please use UE5.2 or higher.
+
+!!! Failure "Known issues with portrait aspect ratio"
+	UE5.1 may not render correctly if the screen aspect ratio is portrait. Use UE5.2 or above.
 
 !!! Failure "Known issue with Lit mode"
 	1. If the point light is close to the surface of the 3D Gaussian Splatting data, the brightness may be uneven.  
