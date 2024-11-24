@@ -100,8 +100,10 @@ nav:
       - how-to-niagara.md
       - how-to-uefn.md
       - how-to-unofficial.md
+      - how-to-runtimeload.md
     - faq.md
     - changelog.md
   - デモプロジェクト:
     - demo-project-overview.md
     - demo-vr.md
+    - demo-runtimeload.md

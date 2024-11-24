@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.12 (Nov. 24, 2024)
+- Only UE5.3 and above have been updated.
+- Added runtime load function. [See details](../how-to-runtimeload).
+
 ## v1.11 (Sep. 1, 2024)
 - Only UE5.2 and above have been updated.
 - Fixed flickering problem on data with a large drawing area.
