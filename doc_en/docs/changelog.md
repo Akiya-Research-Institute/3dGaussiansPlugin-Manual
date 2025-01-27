@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.13 (Jan. 26, Jan. 26, 2025)
+- Only UE5.3 and above have been updated.
+- Fixed a problem that prevented importing data on Windows11
+
 ## v1.12 (Nov. 24, 2024)
 - Only UE5.3 and above have been updated.
 - Added runtime load function. [See details](../how-to-runtimeload).
