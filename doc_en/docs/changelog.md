@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.17 (Feb. 3, 2026)
+- Fixed a bug that caused incorrect rendering for large models (Position texture now uses float32 instead of float16).
+
+## v1.16 (Jan. 16, 2026)
+- Added Editor tick for sorting blocks in editor viewport.
+
+## v1.15 (Aug. 8, 2025)
+- Added support for more ply formats.
+
 ## v1.14 (May. 16, 2025)
 - Only UE5.3 and above have been updated.
 - Fixed a problem that prevented importing data from Postshot.
