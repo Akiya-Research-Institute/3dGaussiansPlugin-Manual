@@ -31,22 +31,27 @@
 - **Kill Volumes**に要素を追加し、非表示の範囲を指定します。ここで指定した範囲の中は描画されなくなります。  
 - **Sprite Size**でガウス分布を描画するスプライトのサイズを調整します。  
 	この値を大きくするとガウス分布の端まで正しく描画されるようになり描画精度が向上します。ただし、それだけスプライトの重なりが多くなり描画負荷が増大します。  
-- ~~**Advanced > VR** で、VR対応をオンにするかを設定します。VR対応にすると描画負荷が少し増加します。~~  
-	(UPDATE: v1.5で設定不要になりました。VR・非VRを問わずそのまま機能します)
-- **Advanced > Lit**で、光を受けるかを設定します。  
-	オンにするとLit・Translucentなマテリアルとして、オフにするとUnlit・Translucentなマテリアルとして描画されます。  
-- **Advanced > Render As 2D Gaussians**をオンにすると、SceneCapture2D等に対応した近似的な描画方式に切り替わります。  
-	描画結果は厳密には不正確ですが、エンジンの描画パイプラインとの互換性が高くなり、SceneCapture2Dを含む多くの場合で機能します。
-- **Advanced > Alpha Boost For 2D Gaussians**で、上記の「2D Gaussians」描画方式におけるガウシアンの透明度を調整します。  
-	「2D Gaussians」描画方式では透明度が薄くなりがちなので、この値を好みに合わせて調整してください。
 
-!!! Warning "v1.2以前からのトリミング範囲の移行"
-	v1.2以前で使用されていたCrop Volumeは非推奨となりました。将来的に削除される可能性があります。  
-	DEPRECATEDの下の"Crop"を無効にし、新しいCrop Volumesをご使用ください。
+- **Render Mode**で、描画方式を設定します。
+	- **Translucent, Unlit**: デフォルトの描画方式です。通常の3D Gaussian Splattingに最も近い描画結果になります。
+	- **Translucent, Unlit, 2DGS**: 3D Gaussianの最も短い軸を無視して2D Gaussianとして描画します。描画負荷が軽減されますが、品質は低下します。エンジンの他の描画パイプラインとの互換性が高くなり、SceneCapture2Dを含む多くの場合で機能します。
+	- **Translucent, Lit**: デフォルトの描画方式と同様ですが、ライトの影響を受けます。
+	- **Translucent, Lit, 2DGS**: 2D Gaussianとして描画し、描画負荷が軽減されます。ライトの影響を受けます。
+	- **Masked, Unlit**: デフォルトの方式で別途描画した結果をMaskedマテリアルとして描画します。複数オブジェクトの前後関係が正しく描画されるなど、Translucentではできない表現が可能です。ただし、ディザによるノイズが発生します。
+	- **Masked, Lit**: "Masked, Unlit"と同様の描画方式ですが、ライトの影響を受けます。また、他のオブジェクトの影を受けることができます。
+	- **Masked, Lit, Cast Shadow**: "Masked, Lit"と同様の描画方式ですが、影を落とすことができます。最も描画負荷が高くなります。
+	- **Custom**: 下位の項目（Primitive type, Blend mode, Shading model, Mesh type, Cast shadow）を編集することで、上記以外の描画方式が実現できます。
+		- **Primitive type**: デフォルトの3D Gaussianとして描画するか、描画負荷と品質の低い2D Gaussianとして描画するか。
+		- **Blend mode**: Translucentマテリアルか、Maskedマテリアルか。
+		- **Shading model**: Unlitか、Litか。
+		- **Mesh type**: 3DGS描画のために内部で使用するメッシュの作り方。Maskedマテリアルの場合はStatic Meshを使うことができ、パフォーマンスと描画品質が向上します。Translucentマテリアルの場合は、Niagara Mesh Rendererが内部で自動的に選択されます。
+		- **Cast shadow**: 影を落とすか。
 
-!!! Warning "~~現在、VRはSpherical Harmonics Degree 0のみに対応~~"
-	~~現状、Degree1～3を選択しても、VRをオンにするとDegree 0として描画されます。Degree1～3には順次対応予定です。~~  
-	(v1.5でDegree1～3に対応しました)
+- **Alpha Boost For 2D Gaussians**で、「2DGS」描画方式におけるガウシアンの透明度を調整します。  
+	「2DGS」描画方式では透明度が薄くなりがちなので、この値を好みに合わせて調整してください。
+- **Specular**: Maskedマテリアルの場合のSpecularの強さを設定します。
+- **World Normal**: Maskedマテリアルの場合のNormalをワールド座標で設定します。
+- **Shadow Intensity**: 影を落とす場合の影の濃さを調整します。
 
 !!! Warning "描画範囲の広いデータでチラつきが発生する場合"
 	デフォルトではガウシアンのソート順を16bitの精度で計算しており、遠方ではソート順を正しく評価できなくなるため、広範囲のデータではチラつきが発生します。
@@ -60,11 +65,3 @@
 
 !!! Failure "縦長画面での問題"
 	UE5.1では、画面のアスペクト比が縦長だと正常に描画できない場合があります。UE5.2以上を使用してください。
-
-!!! Failure "Lit表示の既知の問題"
-	1. ポイントライトが3D Gaussian Splattingのデータの表面に近い場合、不均一な明るさとなる場合があります。  
-		下記では右側のライトが手前で突然明るくなる瞬間があります。  
-		![](images/how-to-lit-point-light.gif){ loading=lazy }  
-	2. スポットライト、矩形ライトの明るさが正しく評価されず、ディレクショナルライトやポイントライトより暗くなります。  
-		下記の3つのライトはいずれもIntensityが15cdですが、手前のスポットライトと右側の矩形ライトが左側のスポットライトに比べて暗いことがわかります。  
-		![](images/how-to-lit-rect-spot.png){ loading=lazy }  

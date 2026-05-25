@@ -711,27 +711,38 @@
     最も遠いブロックのTranslucency Sort Priorityにこの値が適用され、最も近いブロックには<code>この値 + 有効なブロック数 - 1</code>の値が適用されます。</li>
 <li><strong>Crop Volumes</strong>に要素を追加し、トリミング範囲を指定します。ここで指定した範囲の外は描画されなくなります。  </li>
 <li><strong>Kill Volumes</strong>に要素を追加し、非表示の範囲を指定します。ここで指定した範囲の中は描画されなくなります。  </li>
-<li><strong>Sprite Size</strong>でガウス分布を描画するスプライトのサイズを調整します。<br />
-    この値を大きくするとガウス分布の端まで正しく描画されるようになり描画精度が向上します。ただし、それだけスプライトの重なりが多くなり描画負荷が増大します。  </li>
-<li><del><strong>Advanced &gt; VR</strong> で、VR対応をオンにするかを設定します。VR対応にすると描画負荷が少し増加します。</del><br />
-    (UPDATE: v1.5で設定不要になりました。VR・非VRを問わずそのまま機能します)</li>
-<li><strong>Advanced &gt; Lit</strong>で、光を受けるかを設定します。<br />
-    オンにするとLit・Translucentなマテリアルとして、オフにするとUnlit・Translucentなマテリアルとして描画されます。  </li>
-<li><strong>Advanced &gt; Render As 2D Gaussians</strong>をオンにすると、SceneCapture2D等に対応した近似的な描画方式に切り替わります。<br />
-    描画結果は厳密には不正確ですが、エンジンの描画パイプラインとの互換性が高くなり、SceneCapture2Dを含む多くの場合で機能します。</li>
-<li><strong>Advanced &gt; Alpha Boost For 2D Gaussians</strong>で、上記の「2D Gaussians」描画方式におけるガウシアンの透明度を調整します。<br />
-    「2D Gaussians」描画方式では透明度が薄くなりがちなので、この値を好みに合わせて調整してください。</li>
+<li>
+<p><strong>Sprite Size</strong>でガウス分布を描画するスプライトのサイズを調整します。<br />
+    この値を大きくするとガウス分布の端まで正しく描画されるようになり描画精度が向上します。ただし、それだけスプライトの重なりが多くなり描画負荷が増大します。  </p>
+</li>
+<li>
+<p><strong>Render Mode</strong>で、描画方式を設定します。</p>
+<ul>
+<li><strong>Translucent, Unlit</strong>: デフォルトの描画方式です。通常の3D Gaussian Splattingに最も近い描画結果になります。</li>
+<li><strong>Translucent, Unlit, 2DGS</strong>: 3D Gaussianの最も短い軸を無視して2D Gaussianとして描画します。描画負荷が軽減されますが、品質は低下します。エンジンの他の描画パイプラインとの互換性が高くなり、SceneCapture2Dを含む多くの場合で機能します。</li>
+<li><strong>Translucent, Lit</strong>: デフォルトの描画方式と同様ですが、ライトの影響を受けます。</li>
+<li><strong>Translucent, Lit, 2DGS</strong>: 2D Gaussianとして描画し、描画負荷が軽減されます。ライトの影響を受けます。</li>
+<li><strong>Masked, Unlit</strong>: デフォルトの方式で別途描画した結果をMaskedマテリアルとして描画します。複数オブジェクトの前後関係が正しく描画されるなど、Translucentではできない表現が可能です。ただし、ディザによるノイズが発生します。</li>
+<li><strong>Masked, Lit</strong>: "Masked, Unlit"と同様の描画方式ですが、ライトの影響を受けます。また、他のオブジェクトの影を受けることができます。</li>
+<li><strong>Masked, Lit, Cast Shadow</strong>: "Masked, Lit"と同様の描画方式ですが、影を落とすことができます。最も描画負荷が高くなります。</li>
+<li><strong>Custom</strong>: 下位の項目（Primitive type, Blend mode, Shading model, Mesh type, Cast shadow）を編集することで、上記以外の描画方式が実現できます。<ul>
+<li><strong>Primitive type</strong>: デフォルトの3D Gaussianとして描画するか、描画負荷と品質の低い2D Gaussianとして描画するか。</li>
+<li><strong>Blend mode</strong>: Translucentマテリアルか、Maskedマテリアルか。</li>
+<li><strong>Shading model</strong>: Unlitか、Litか。</li>
+<li><strong>Mesh type</strong>: 3DGS描画のために内部で使用するメッシュの作り方。Maskedマテリアルの場合はStatic Meshを使うことができ、パフォーマンスと描画品質が向上します。Translucentマテリアルの場合は、Niagara Mesh Rendererが内部で自動的に選択されます。</li>
+<li><strong>Cast shadow</strong>: 影を落とすか。</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">v1.2以前からのトリミング範囲の移行</p>
-<p>v1.2以前で使用されていたCrop Volumeは非推奨となりました。将来的に削除される可能性があります。<br />
-DEPRECATEDの下の"Crop"を無効にし、新しいCrop Volumesをご使用ください。</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title"><del>現在、VRはSpherical Harmonics Degree 0のみに対応</del></p>
-<p><del>現状、Degree1～3を選択しても、VRをオンにするとDegree 0として描画されます。Degree1～3には順次対応予定です。</del><br />
-(v1.5でDegree1～3に対応しました)</p>
-</div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Alpha Boost For 2D Gaussians</strong>で、「2DGS」描画方式におけるガウシアンの透明度を調整します。<br />
+    「2DGS」描画方式では透明度が薄くなりがちなので、この値を好みに合わせて調整してください。</p>
+</li>
+<li><strong>Specular</strong>: Maskedマテリアルの場合のSpecularの強さを設定します。</li>
+<li><strong>World Normal</strong>: Maskedマテリアルの場合のNormalをワールド座標で設定します。</li>
+<li><strong>Shadow Intensity</strong>: 影を落とす場合の影の濃さを調整します。</li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">描画範囲の広いデータでチラつきが発生する場合</p>
 <p>デフォルトではガウシアンのソート順を16bitの精度で計算しており、遠方ではソート順を正しく評価できなくなるため、広範囲のデータではチラつきが発生します。</p>
@@ -745,17 +756,6 @@ DEPRECATEDの下の"Crop"を無効にし、新しいCrop Volumesをご使用く�
 <div class="admonition failure">
 <p class="admonition-title">縦長画面での問題</p>
 <p>UE5.1では、画面のアスペクト比が縦長だと正常に描画できない場合があります。UE5.2以上を使用してください。</p>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">Lit表示の既知の問題</p>
-<ol>
-<li>ポイントライトが3D Gaussian Splattingのデータの表面に近い場合、不均一な明るさとなる場合があります。<br />
-    下記では右側のライトが手前で突然明るくなる瞬間があります。<br />
-<img alt="" loading="lazy" src="../images/how-to-lit-point-light.gif" />  </li>
-<li>スポットライト、矩形ライトの明るさが正しく評価されず、ディレクショナルライトやポイントライトより暗くなります。<br />
-    下記の3つのライトはいずれもIntensityが15cdですが、手前のスポットライトと右側の矩形ライトが左側のスポットライトに比べて暗いことがわかります。<br />
-<img alt="" loading="lazy" src="../images/how-to-lit-rect-spot.png" />  </li>
-</ol>
 </div>
 
 

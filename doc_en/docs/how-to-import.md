@@ -33,22 +33,27 @@ Also, if necessary, set the following items under "Default" in the Details tab.
 	Gaussians inside the range specified here will not be rendered.
 - **Sprite Size**: Adjust the size of the sprite that draws the Gaussian distribution.  
 	Increasing this value allows accurate rendering to the edges of the Gaussian distribution. However, this increases the number of overlapping sprites and increases the drawing load.  
-- ~~**Advanced > VR**: Turn on to support VR. When turned on, the rendering load will increase slightly.~~  
-	(UPDATE v1.5: This setting is no longer needed. It jsut works for both VR and non-VR)
-- **Advanced > Lit**: Turn on to support lighting.  
-	When turned on, Lit/Translucent material is used. When turned off, Unlit/Translucent material is used.
-- **Advanced > Render As 2D Gaussians**: Turn on to switch to an approximate rendering method compatible with SceneCapture2D and others.  
-	The result is not accurate, but it is more compatible with the engine's rendering pipeline and works in many cases, including SceneCapture2D.
-- **Advanced > Alpha Boost For 2D Gaussians**: Adjust the opacity of the gaussinas in the "2D Gaussians" rendering method described above.
+
+- **Render Mode**: Set the rendering method.
+	- **Translucent, Unlit**: The default rendering method. Produces the closest result to standard 3D Gaussian Splatting.
+	- **Translucent, Unlit, 2DGS**: Renders 3D Gaussians as 2D Gaussians, ignoring the shortest axis. This reduces rendering load but lowers quality. It improves compatibility with other engine rendering pipelines and works in many cases, including SceneCapture2D.
+	- **Translucent, Lit**: Same as the default method, but affected by lights.
+	- **Translucent, Lit, 2DGS**: Renders as 2D Gaussians with reduced load, affected by lights.
+	- **Masked, Unlit**: Same as default method, but drawn as Masked material. This enables expressions that Translucent cannot achieve, such as correct rendering of the front-back relationship between multiple objects. However, it generates dither-based noise.
+	- **Masked, Lit**: Same as "Masked, Unlit", but affected by lights. It can also receive shadows from other objects.
+	- **Masked, Lit, Cast Shadow**: Same as "Masked, Lit", but can cast shadows. This is the most computationally expensive.
+	- **Custom**: Customize render method
+		- **Primitive type**: Default 3D Gaussian or 2D Gaussian (lower performance and quality).
+		- **Blend mode**: Translucent material or Masked material.
+		- **Shading model**: Unlit or Lit.
+		- **Mesh type**: The method used to create the internal mesh for 3DGS drawing. Static Mesh can be used for Masked materials, improving performance and visual quality. For Translucent materials, Niagara Mesh Renderer is automatically selected internally.
+		- **Cast shadow**: Whether to cast shadows.
+
+- **Alpha Boost For 2D Gaussians**: Adjust the opacity of the gaussinas in the "2D Gaussians" rendering method.
 	The opacity in the "2D Gaussians" rendering method tends to be thin, so tweak this for your liking.
-
-!!! Warning "Migrate cropping range from v1.2 or earlier"
-	"Crop Volume", which was used in v1.2 and earlier, has been deprecated. It may be removed in the future.  
-	Please disable "Crop" under DEPRECATED and use the new "Crop Volumes".
-
-!!! Warning "~~VR mode supports only Spherical Harmonics Degree 0~~"
-	~~Currently, even if you select Degree 1 to 3, it will be rendered as Degree 0 when you turn on VR. We plan to eventually support Degree 1 to 3 as well.~~  
-	(UPDATE v1.5: Now Degree 1 to 3 are supported)
+- **Specular**: Sets the strength of Specular in the case of a Masked material.
+- **World Normal**: Sets the Normal in world coordinates in the case of a Masked material.
+- **Shadow Intensity**: Adjusts the intensity of shadows when casting shadows.
 
 !!! Warning "Flickering when viewed from a long distance"
 	By default, the Gaussian sort order is calculated with 16-bit precision, which can cause flickering when viewed from a long distance, as the sort order cannot be correctly evaluated at a distance.
@@ -62,11 +67,3 @@ Also, if necessary, set the following items under "Default" in the Details tab.
 
 !!! Failure "Known issues with portrait aspect ratio"
 	UE5.1 may not render correctly if the screen aspect ratio is portrait. Use UE5.2 or above.
-
-!!! Failure "Known issue with Lit mode"
-	1. If the point light is close to the surface of the 3D Gaussian Splatting data, the brightness may be uneven.  
-		Below, there is a moment when the light on the right suddenly becomes brighter.  
-		![](images/how-to-lit-point-light.gif){ loading=lazy }  
-	2. The brightness of spot lights and rect lights is not evaluated correctly, making them darker than directional lights and point lights.  
-		All three lights below have an intensity of 15 cd, but you can see that the spot light in the front and the rect light on the right are darker than the spotlight on the left.  
-		![](images/how-to-lit-rect-spot.png){ loading=lazy }  

@@ -1,4 +1,6 @@
 # Changelog
+## v2.0 (2026/05/23)
+- Added support for rendering with masked materials and shadows.
 
 ## v1.17 (Feb. 3, 2026)
 - Fixed a bug that caused incorrect rendering for large models (Position texture now uses float32 instead of float16).
